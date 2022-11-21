@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Qua_control"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Qua_control.elf">
+				<Option output="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Qua_control.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F407xx"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Inc"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0/arm-none-eabi"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0/backward"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/include"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/include-fixed"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 Qua_control.elf"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Qua_control.elf/fast">
+				<Option output="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Qua_control.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F407xx"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Inc"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0/arm-none-eabi"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include/c++/12.2.0/backward"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/include"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/include-fixed"/>
+					<Add directory="c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/12.2.0/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 Qua_control.elf/fast"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/msys64/mingw64/bin/mingw32-make.exe -f &quot;D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Inc/main.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Inc/stm32f4xx_hal_conf.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Inc/stm32f4xx_it.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/NGroundStation.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/NGroundStation.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/data_feedback.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/data_feedback.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/readme.md">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/usart_plus.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/usart_plus.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/base_head.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/ADRC/track_differentiator.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/ADRC/track_differentiator.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/PID/pid_api.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/PID/pid_api.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/PID/pid_base.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/PID/pid_base.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/control_api.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/control_api.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/readme.md">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/estimate/EKF/EKF_update.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/estimate/EKF/EKF_update.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/estimate/Mahony/MahonyAHRS.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/estimate/Mahony/MahonyAHRS.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/estimate/Wick/MadgwickAHRS.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/estimate/Wick/MadgwickAHRS.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/estimate/readme.md">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/head.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/main.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/main.old">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/crc16.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/crc16.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/matrix.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/matrix.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/pre_process.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/pre_process.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/readme.md">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/GPS/BN880.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/GPS/BN880.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/gyro_acc/ICM20602.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/gyro_acc/MPU6050.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/i2c/hard_i2c.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/i2c/hard_i2c.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/mag/HMC5883.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/mag/HMC5883.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/mag/HMC5883.pdf">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/mag/IST8310.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/mag/IST8310.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/mag/IST8310_datasheet.pdf">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/mag/Mag3110.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/mag/Mag3110.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/pressure/BMP180.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/pressure/BMP180.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/pressure/SPL06.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/pressure/SPL06.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/readme.md">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/sensor_calibrate.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/sensor_calibrate.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/sensor_socket.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/sensor_socket.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/spi/spi.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/spi/spi.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/stm32f4xx_hal_msp.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/stm32f4xx_it.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/syscalls.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sysmem.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/system_stm32f4xx.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/toolkit/pid_control.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/toolkit/pid_control.hpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/toolkit/readme.md">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Startup/startup_stm32f407vetx.s">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Device/ST/STM32F4xx/LICENSE.txt">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/LICENSE.txt">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sd.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_i2c.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_sdmmc.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/LICENSE.txt">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/STM32F407VETX_FLASH.ld">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S D:\c0.Project_Public\stm32_project\Qua_control\Qua_control -B D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug
+-- Minimal optimization, debug info included
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug
