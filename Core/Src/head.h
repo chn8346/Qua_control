@@ -25,6 +25,7 @@
 #include "math/matrix.h"      // 矩阵计算库
 #include "math/pre_process.h" // 用于起飞前的传感器校准
 #include "math/crc16.h"       // crc16校验库
+#include "math/digital_filter.h" // 数字滤波器
 
 // 传感器接口/驱动
 #include "sensor_socket/sensor_calibrate.h" // 校准库

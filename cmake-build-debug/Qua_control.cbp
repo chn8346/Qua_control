@@ -192,6 +192,12 @@
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/crc16.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/digital_filter.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/digital_filter.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/matrix.cpp">
 			<Option target="Qua_control.elf"/>
 		</Unit>

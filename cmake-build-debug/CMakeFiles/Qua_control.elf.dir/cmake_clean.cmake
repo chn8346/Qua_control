@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj.d"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.obj"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.obj.d"
+  "CMakeFiles/Qua_control.elf.dir/Core/Src/math/digital_filter.cpp.obj"
+  "CMakeFiles/Qua_control.elf.dir/Core/Src/math/digital_filter.cpp.obj.d"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.obj"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.obj.d"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.obj"

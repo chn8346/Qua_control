@@ -416,6 +416,30 @@ Core/Src/math/crc16.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.s
 .PHONY : Core/Src/math/crc16.cpp.s
 
+Core/Src/math/digital_filter.obj: Core/Src/math/digital_filter.cpp.obj
+.PHONY : Core/Src/math/digital_filter.obj
+
+# target to build an object file
+Core/Src/math/digital_filter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/digital_filter.cpp.obj
+.PHONY : Core/Src/math/digital_filter.cpp.obj
+
+Core/Src/math/digital_filter.i: Core/Src/math/digital_filter.cpp.i
+.PHONY : Core/Src/math/digital_filter.i
+
+# target to preprocess a source file
+Core/Src/math/digital_filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/digital_filter.cpp.i
+.PHONY : Core/Src/math/digital_filter.cpp.i
+
+Core/Src/math/digital_filter.s: Core/Src/math/digital_filter.cpp.s
+.PHONY : Core/Src/math/digital_filter.s
+
+# target to generate assembly for a file
+Core/Src/math/digital_filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/digital_filter.cpp.s
+.PHONY : Core/Src/math/digital_filter.cpp.s
+
 Core/Src/math/matrix.obj: Core/Src/math/matrix.cpp.obj
 .PHONY : Core/Src/math/matrix.obj
 
@@ -1525,6 +1549,9 @@ help:
 	@echo ... Core/Src/math/crc16.obj
 	@echo ... Core/Src/math/crc16.i
 	@echo ... Core/Src/math/crc16.s
+	@echo ... Core/Src/math/digital_filter.obj
+	@echo ... Core/Src/math/digital_filter.i
+	@echo ... Core/Src/math/digital_filter.s
 	@echo ... Core/Src/math/matrix.obj
 	@echo ... Core/Src/math/matrix.i
 	@echo ... Core/Src/math/matrix.s
