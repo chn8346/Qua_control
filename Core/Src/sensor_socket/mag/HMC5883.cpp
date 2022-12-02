@@ -6,10 +6,13 @@
 
 I2C_HandleTypeDef * i2c_hmc;
 
-void HMC5883_init()
+
+void HMC5883_init(I2C_HandleTypeDef * i2c)
 {
     uint8_t value = HMC5883_CONF_A_V;
-    HAL_I2C_Mem_Write(i2c_hmc, HMC5883_WRITE_ADDR, HMC5883_CONFIG_A,1, &value, 1, 500);
+    i2c_hmc = i2c;
+    uint8_t s;
+    s = HAL_I2C_Mem_Write(i2c_hmc, HMC5883_WRITE_ADDR, HMC5883_CONFIG_A,1, &value, 1, 500);
 
     value = HMC5883_CONF_B_V;
     HAL_I2C_Mem_Write(i2c_hmc, HMC5883_WRITE_ADDR, HMC5883_CONFIG_B,1, &value, 1, 500);
@@ -54,8 +57,25 @@ void HMC5883_read_and_process(float* mag)
     m16[2] = m[4];
     m16[2] = (m16[2]<<8) + m[5];
 
-    mag[0] = (float)m16[0];
-    mag[1] = (float)m16[1];
-    mag[2] = (float)m16[2];
+    mag[0] = (float)(int16_t)m16[0];
+    mag[1] = (float)(int16_t)m16[1];
+    mag[2] = (float)(int16_t)m16[2];
+}
+
+void HMC5883_read_and_process(uint8_t* m, float* mag)
+{
+    HMC5883_read(m);
+
+    uint16_t m16[3];
+    m16[0] = m[0];
+    m16[0] = (m16[0]<<8) + m[1];
+    m16[1] = m[2];
+    m16[1] = (m16[1]<<8) + m[3];
+    m16[2] = m[4];
+    m16[2] = (m16[2]<<8) + m[5];
+
+    mag[0] = (float)(int16_t)m16[0];
+    mag[1] = (float)(int16_t)m16[1];
+    mag[2] = (float)(int16_t)m16[2];
 }
 

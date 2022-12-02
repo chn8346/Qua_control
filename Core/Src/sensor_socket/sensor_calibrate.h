@@ -9,6 +9,7 @@
 
 
 #include "../base_head.h"
+#include "sensor_socket.h"
 
 // calibrate parameter 中的参数位置
 #define CLB_ACCX    0
@@ -37,6 +38,7 @@ void calibrate_get_i2c_spi(I2C_HandleTypeDef* i2c1,
                            SPI_HandleTypeDef* spi1,
                            SPI_HandleTypeDef* spi2);
 void calibrate_at_init(UART_HandleTypeDef* uart);
+void calibrate_at_init();       // 不加参数，自动使用经验参数启动
 void psr_calibrate_at_flying();
 void calibrate_return_data(float * origin_acc, float * origin_angle, float * origin_mag, float q1, float q2, float q3, float q4);
 void uart_transmit_with_next_sensor_clb(UART_HandleTypeDef* uart, uint8_t* data, uint8_t len);
@@ -48,11 +50,14 @@ void gravity_altitude_uni_estimate(const float* gravity_norm, float* altitude_or
 
 // 用于快速init使用的经验数值
 
-#define CBL_MPU6050_ACC_GYRO_BIAS       {550, 1500, 2900};
-#define CBL_MPU6050_ANGLE_RATE_GAIN     {0.00012, 0.00014, 0.00012};
+#define CBL_MPU6050_ACC_GYRO_BIAS       {550.0, 1500.0, -2900.0, -64.8, 294.0, -32.0}
+#define CBL_MPU6050_ANGLE_RATE_GAIN     {0.00012, 0.00014, 0.00012}
 #define CBL_MPU6050_GRAVITY_VALUE       176.0
 
-#define CBL_MAG3110_BIAS
-#define CBL_MAG3110_HALF_RANGE
+#define CBL_MAG3110_BIAS                {27800.0, 103.0, -2005.0}
+#define CBL_MAG3110_HALF_RANGE          {45.0, 310.0, 375.0}
+
+#define CBL_HMC5883_BIAS                {15.0000, 477.5000, -109.5000}
+#define CBL_HMC5883_HALF_RANGE          {365.0000, 105.5000, 391.5000}
 
 #endif //QUA_CONTROL_SENSOR_CALIBRATE_H

@@ -45,4 +45,22 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.obj: \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_tim.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_tim_ex.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_uart.h \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Inc/stm32f4xx_it.h
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Inc/stm32f4xx_it.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\base_head.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdio.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\_ansi.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\newlib.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\config.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\ieeefp.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\cdefs.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\lib\gcc\arm-none-eabi\12.2.0\include\stdarg.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\reent.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\_ansi.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\_types.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\_types.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\lock.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\stdio.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\math.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdlib.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\stdlib.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\alloca.h

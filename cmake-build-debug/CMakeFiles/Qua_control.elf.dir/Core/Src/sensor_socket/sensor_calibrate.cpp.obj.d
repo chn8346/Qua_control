@@ -104,7 +104,18 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.obj: 
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\tr1\riemann_zeta.tcc \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\stdlib.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\cstdlib \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\sensor_socket.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\gyro_acc/MPU6050.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\gyro_acc/ICM20602.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\mag/Mag3110.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\mag/IST8310.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\mag/HMC5883.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\pressure/SPL06.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\pressure/BMP180.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\GPS/BN880.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\ultra_sonic/Ultra_sonic.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h

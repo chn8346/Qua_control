@@ -2,10 +2,10 @@
 // Created by fanchunhui on 2022/11/9.
 //
 
+#include "../../base_head.h"
+
 #ifndef QUA_CONTROL_ICM20602_H
 #define QUA_CONTROL_ICM20602_H
-
-#include "../../base_head.h"
 
 #define ICM_ADDR_NO_PULL    (0x68<<1)
 #define ICM_ADDR_PULL       (0x69<<1)
@@ -56,5 +56,7 @@ void ICM_reset();
 void ICM_get_full_raw(uint8_t* data);
 void ICM_get_raw(uint8_t* data);
 void ICM_get_6_axis_data(float* data_);
+void ICM_get_6_axis_data(uint8_t *data, float* data_);
+void Icm_process(uint8_t data[12], float* data_);
 
 #endif //QUA_CONTROL_ICM20602_H

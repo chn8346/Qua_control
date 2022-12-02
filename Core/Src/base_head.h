@@ -30,9 +30,34 @@ typedef struct{
  *  TODO 系统参数
  * */
 
-#define SAMPLE_RATE 200         // 采样速度
-#define DELTA_T     0.005       // 采样时间
+#define SAMPLE_RATE       200         // 采样速度
+#define DELTA_T           0.005       // 采样时间
+#define DELTA_T_float     ((float)0.005)       // 采样时间(float)
 
+#define Pi          3.1415926
+
+#define PITCH_ANGLE_LIMIT   0.174  // 小于10度
+#define ROLL_ANGLE_LIMIT    0.174  // 小于10度
+
+// 飞行器参数
+#define Qua_MASS                2.0     // 飞行器质量
+#define Qua_Kf                  0.001   // 飞行器拉力系数
+#define Qua_Km                  0.001   // 飞行器力矩系数
+#define Qua_TAKE_OFF_P          0.45    // 飞行器起飞油门
+#define Qua_DIAMETER            0.3     // 飞行器桨距（电机和物理中心点距离）
+
+// 控制器类型
+#define CONTROLLER_TYPE_PID     0x0F
+#define CONTROLLER_TYPE_ADRC    0xAF
+
+// PWM
+#define PWM_FREQ                50                // PWM输出频率(Hz)
+#define PWM_RESOLVE             1000              // PWM分辨率
+#define PWM_Period              20000             // 周期
+
+// PPM
+// #define PPM_nUS                 10      // PPM采样时间(us)
+#define PPM_data_len_limit         10      // PPM数据长度
 
 /*
  *
@@ -217,107 +242,6 @@ typedef struct{
 #define UART6_RX_PORT   GPIOC
 #define UART6_RX_PIN    GPIO_PIN_7
 
-/*
- * TODO SENSOR DATA
- *
- * */
-
-// IMU choose  -- bottom have higher right
-#define MPU6050_ENABLE  1
-#define ICM20602_ENABLE 0
-
-// MAG choose  -- bottom have higher right
-#define MAG3110_ENABLE 1
-#define IST8310_ENABLE 0
-
-// PRESSURE choose
-#define SPL06_ENABLE 1
-
-// GPS choose  -- bottom have higher right
-#define BN880_ENABLE 1
-
-// IMU
-#if MPU6050_ENABLE
-#define IMU_ADDR 0x87
-
-#define IMU_WHO_AM_I_ADDR 0x75
-#define IMU_WHO_AM_I_KEY  0x75
-
-#define IMU_ACC_XL 0x45
-#define IMU_ACC_XH 0x45
-#define IMU_ACC_YL 0x45
-#define IMU_ACC_YH 0x45
-#define IMU_ACC_ZL 0x45
-#define IMU_ACC_ZH 0x45
-#define IMU_G_XL 0x45
-#define IMU_G_XH 0x45
-#define IMU_G_YL 0x45
-#define IMU_G_YH 0x45
-#define IMU_G_ZL 0x45
-#define IMU_G_ZH 0x45
-#endif
-
-// IMU
-#if ICM20602_ENABLE
-#define IMU_ADDR 0x87
-
-#define IMU_WHO_AM_I_ADDR 0x75
-#define IMU_WHO_AM_I_KEY  0x75
-
-#define IMU_ACC_XL 0x45
-#define IMU_ACC_XH 0x45
-#define IMU_ACC_YL 0x45
-#define IMU_ACC_YH 0x45
-#define IMU_ACC_ZL 0x45
-#define IMU_ACC_ZH 0x45
-#define IMU_G_XL 0x45
-#define IMU_G_XH 0x45
-#define IMU_G_YL 0x45
-#define IMU_G_YH 0x45
-#define IMU_G_ZL 0x45
-#define IMU_G_ZH 0x45
-#endif
-
-// MAG
-#if MAG3110_ENABLE
-#define MAG_ADDR 0x87
-
-#define MAG_WHO_AM_I_ADDR 0x75
-#define MAG_WHO_AM_I_KEY  0x75
-
-#define MAG_XL 0x45
-#define MAG_XH 0x45
-#define MAG_YL 0x45
-#define MAG_YH 0x45
-#define MAG_ZL 0x45
-#define MAG_ZH 0x45
-#endif
-
-// MAG
-#if IST8310_ENABLE
-#define MAG_ADDR 0x87
-
-#define MAG_WHO_AM_I_ADDR 0x75
-#define MAG_WHO_AM_I_KEY  0x75
-
-#define MAG_XL 0x45
-#define MAG_XH 0x45
-#define MAG_YL 0x45
-#define MAG_YH 0x45
-#define MAG_ZL 0x45
-#define MAG_ZH 0x45
-#endif
-
-// PRESSURE
-#if SPL06_ENABLE
-
-#endif
-
-// GPS
-#if BN880_ENABLE
-
-#endif
-
 
 /*
  * TODO ALTER
@@ -335,5 +259,51 @@ typedef struct{
 
 #define TF_DET_LED_PORT     GPIOB
 #define TF_DET_LED_PIN      GPIO_PIN_9
+
+/*
+ *      自定义接口参数
+ * */
+
+#define PPM_RX_PORT         GPIOE
+#define PPM_RX_PIN          GPIO_PIN_15
+
+#define ADC_BATTERY_PORT    GPIOB
+#define ADC_BATTERY_PIN     GPIO_PIN_1
+
+/*
+ *     PWM 通道
+ *
+ * */
+
+#define PWM_AP_TIM_NO_  2
+#define PWM_AN_TIM_NO_  2
+#define PWM_BP_TIM_NO_  1
+#define PWM_BN_TIM_NO_  1
+#define PWM_CP_TIM_NO_  2
+#define PWM_CN_TIM_NO_  2
+#define PWM_DP_TIM_NO_  1
+#define PWM_DN_TIM_NO_  1
+
+#define PWM_AP_TIM_CHANNEL  TIM_CHANNEL_1
+#define PWM_AN_TIM_CHANNEL  TIM_CHANNEL_2
+#define PWM_BP_TIM_CHANNEL  TIM_CHANNEL_1
+#define PWM_BN_TIM_CHANNEL  TIM_CHANNEL_2
+#define PWM_CP_TIM_CHANNEL  TIM_CHANNEL_3
+#define PWM_CN_TIM_CHANNEL  TIM_CHANNEL_4
+#define PWM_DP_TIM_CHANNEL  TIM_CHANNEL_3
+#define PWM_DN_TIM_CHANNEL  TIM_CHANNEL_4
+
+/*
+ *      PPM 通道
+ *
+ *      注意通道从0开始算，例如：通道1，数值为0
+ * */
+
+
+#define PPM_CH_FORCE    2       // 注意通道从0开始算，例如：通道1，数值为0
+#define PPM_CH_YAW      3       // 注意通道从0开始算，例如：通道1，数值为0
+#define PPM_CH_PITCH    1       // 注意通道从0开始算，例如：通道1，数值为0
+#define PPM_CH_ROLL     0       // 注意通道从0开始算，例如：通道1，数值为0
+
 
 #endif //QUA_CONTROL_BASE_HEAD_H

@@ -120,6 +120,12 @@
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/readme.md">
 			<Option target="Qua_control.elf"/>
 		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/remote_control_v1.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/remote_control_v1.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/TR/usart_plus.cpp">
 			<Option target="Qua_control.elf"/>
 		</Unit>
@@ -135,6 +141,12 @@
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/ADRC/track_differentiator.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/Filter_digital/digital_filter.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/Filter_digital/digital_filter.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/PID/pid_api.cpp">
 			<Option target="Qua_control.elf"/>
 		</Unit>
@@ -145,6 +157,12 @@
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/PID/pid_base.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/PWM/PWM_generator.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/PWM/PWM_generator.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/control_api.cpp">
@@ -180,22 +198,25 @@
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/head.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/m1.old">
+			<Option target="Qua_control.elf"/>
+		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/main.cpp">
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/main.old">
 			<Option target="Qua_control.elf"/>
 		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/main2.old">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/mainpp.old">
+			<Option target="Qua_control.elf"/>
+		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/crc16.cpp">
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/crc16.h">
-			<Option target="Qua_control.elf"/>
-		</Unit>
-		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/digital_filter.cpp">
-			<Option target="Qua_control.elf"/>
-		</Unit>
-		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/digital_filter.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/matrix.cpp">
@@ -208,6 +229,12 @@
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/pre_process.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/quat.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/quat.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/math/readme.md">
@@ -294,6 +321,12 @@
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/spi/spi.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/stm32f4xx_hal_msp.c">
 			<Option target="Qua_control.elf"/>
 		</Unit>
@@ -313,6 +346,12 @@
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/toolkit/pid_control.hpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/toolkit/pos_velo_estimate_testv1.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/toolkit/pos_velo_estimate_testv1.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/toolkit/readme.md">

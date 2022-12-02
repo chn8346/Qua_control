@@ -33,5 +33,6 @@ void IST8310_init(I2C_HandleTypeDef* i2c);
 void IST8310_reset();
 void IST8310_get_raw_data(uint8_t* data);
 void IST8310_get_3d_data(float* data);
+void IST8310_get_3d_data(uint8_t* data8, float* data);
 
 #endif //QUA_CONTROL_IST8310_H

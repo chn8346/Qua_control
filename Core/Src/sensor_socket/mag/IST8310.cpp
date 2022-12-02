@@ -35,6 +35,15 @@ void IST8310_get_raw_data(uint8_t* data)
     HAL_I2C_Mem_Read(i2c_IST, IST8310_ADDR, IST8310_MAG_ZH, 1, data+5, 1, 500);
 }
 
+void IST8310_get_3d_data(uint8_t* data8, float* data)
+{
+    IST8310_get_raw_data(data8);
+
+    data[0] = (float)(data8[0] + (data8[1]<<8));
+    data[1] = (float)(data8[2] + (data8[3]<<8));
+    data[2] = (float)(data8[4] + (data8[5]<<8));
+}
+
 void IST8310_get_3d_data(float* data)
 {
     uint8_t data8[6];

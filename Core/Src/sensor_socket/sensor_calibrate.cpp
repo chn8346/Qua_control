@@ -6,7 +6,7 @@
 #include "gyro_acc/MPU6050.h"
 #include "mag/Mag3110.h"
 
-extern uint8_t send_sgn;
+extern int send_sgn;
 
 // 模块内部参数
 calibrate_parameter cpr;
@@ -72,10 +72,12 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     sprintf((char *) msg, "place flat to fix acc\n");
     uart_transmit_with_next_sensor_clb(uart, msg, str_len_cbl((char *) msg));
     for (int i = 0; i < acc_fix_circle_num; i++) {
-        MAG3110_read(i2c1_clb, mag_data);
-        MAG3110_process2(mag_data, mag_fdata);
-        imu6050_read(i2c2_clb, data, 1);
-        imu_process(data, datap);
+//        MAG3110_read(i2c1_clb, mag_data);
+//        MAG3110_process2(mag_data, mag_fdata);
+        MAG_read_data(mag_data, mag_fdata);
+        IMU_read_data(data, datap);
+//        imu6050_read(i2c2_clb, data, 1);
+//        imu_process(data, datap);
         // TODO 【不是废话】 传感器没有统一的数据结构封装，从软件可持续开发考虑，最好进行定义
         cpr.mid[CLB_ACCX] = cpr.mid[CLB_ACCX] + datap[0] / acc_fix_circle_num_float;
         cpr.mid[CLB_ACCY] = cpr.mid[CLB_ACCY] + datap[1] / acc_fix_circle_num_float;
@@ -101,8 +103,9 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     float in_angle = 0;
     for (int i = 0; i < gyro_fix_circle_num; i++)
     {
-        imu6050_read(i2c2_clb, data, 1);
-        imu_process(data, datap);
+        IMU_read_data(data, datap);
+//        imu6050_read(i2c2_clb, data, 1);
+//        imu_process(data, datap);
         in_angle = in_angle + datap[5]*(float)DELTA_T; // z轴角速度积分
 
         // 延时
@@ -122,8 +125,10 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     in_angle = 0;
     for (int i = 0; i < gyro_fix_circle_num; i++)
     {
-        imu6050_read(i2c2_clb, data, 1);
-        imu_process(data, datap);
+//        imu6050_read(i2c2_clb, data, 1);
+//        imu_process(data, datap);
+        IMU_read_data(data, datap);
+
         in_angle = in_angle + datap[4]*(float)DELTA_T; // z轴角速度积分
 
         // 延时
@@ -142,8 +147,9 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     in_angle = 0;
     for (int i = 0; i < gyro_fix_circle_num; i++)
     {
-        imu6050_read(i2c2_clb, data, 1);
-        imu_process(data, datap);
+//        imu6050_read(i2c2_clb, data, 1);
+//        imu_process(data, datap);
+        IMU_read_data(data, datap);
         in_angle = in_angle + datap[3]*(float)DELTA_T; // z轴角速度积分
 
         // 延时
@@ -163,8 +169,9 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     delay_clb_n_10ms(800);
     cpr.mid[CLB_ACCZ] = 0; // 归零，重新计算
     for (int i = 0; i < acc_fix_circle_num; i++) {
-        imu6050_read(i2c2_clb, data, 1);
-        imu_process(data, datap);
+//        imu6050_read(i2c2_clb, data, 1);
+//        imu_process(data, datap);
+        IMU_read_data(data, datap);
         // TODO 传感器没有统一的数据结构封装
         cpr.mid[CLB_ACCZ] = cpr.mid[CLB_ACCZ] + datap[2] / acc_fix_circle_num_float;
 
@@ -188,9 +195,11 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     cpr.mag_limit[5] = 70000;
     for(int i = 0; i < mag_fix_circle_num; i++)
     {
-        MAG3110_read(i2c1_clb, mag_data);
-        // MAG3110_process2(mag_data, mag_fdata);
-        MAG3110_process3(mag_data, mag_fdata);
+//        MAG3110_read(i2c1_clb, mag_data);
+//        // MAG3110_process2(mag_data, mag_fdata);
+//        MAG3110_process3(mag_data, mag_fdata);
+        MAG_read_data(mag_data, mag_fdata);
+
         cpr.mag_limit[0] = cpr.mag_limit[0] > mag_fdata[0] ?  cpr.mag_limit[0]:mag_fdata[0];
         cpr.mag_limit[1] = cpr.mag_limit[1] < mag_fdata[0] ?  cpr.mag_limit[1]:mag_fdata[0];
         cpr.mag_limit[2] = cpr.mag_limit[2] > mag_fdata[1] ?  cpr.mag_limit[2]:mag_fdata[1];
@@ -208,9 +217,11 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     uart_transmit_with_next_sensor_clb(uart, msg, str_len_cbl((char*)msg));
     for(int i = 0; i < mag_fix_circle_num*2; i++)
     {
-        MAG3110_read(i2c1_clb, mag_data);
-        // MAG3110_process2(mag_data, mag_fdata);
-        MAG3110_process3(mag_data, mag_fdata);
+//        MAG3110_read(i2c1_clb, mag_data);
+//        // MAG3110_process2(mag_data, mag_fdata);
+//        MAG3110_process3(mag_data, mag_fdata);
+        MAG_read_data(mag_data, mag_fdata);
+
         cpr.mag_limit[0] = cpr.mag_limit[0] > mag_fdata[0] ?  cpr.mag_limit[0]:mag_fdata[0];
         cpr.mag_limit[1] = cpr.mag_limit[1] < mag_fdata[0] ?  cpr.mag_limit[1]:mag_fdata[0];
         cpr.mag_limit[2] = cpr.mag_limit[2] > mag_fdata[1] ?  cpr.mag_limit[2]:mag_fdata[1];
@@ -237,8 +248,9 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     float ax_temp = 0, ay_temp = 0, az_temp = 0;
     for(int i = 0; i < acc_fix_circle_num; i++)
     {
-        imu6050_read(i2c2_clb, data, 1);
-        imu_process(data, datap);
+//        imu6050_read(i2c2_clb, data, 1);
+//        imu_process(data, datap);
+        IMU_read_data(data, datap);
         ax_temp = ax_temp + (datap[0] - cpr.mid[CLB_ACCX])/acc_shrink_scale/acc_fix_circle_num_float;
         ay_temp = ay_temp + (datap[1] - cpr.mid[CLB_ACCY])/acc_shrink_scale/acc_fix_circle_num_float;
         az_temp = az_temp + (datap[2] - cpr.mid[CLB_ACCZ])/acc_shrink_scale/acc_fix_circle_num_float;
@@ -298,6 +310,37 @@ void calibrate_at_init(UART_HandleTypeDef* uart) {
     // TODO 2 测量气压传感器数据
 }
 
+void calibrate_at_init()       // 不加参数，自动使用经验参数启动
+{
+    // 加速度和陀螺仪零点数据
+    float ga_mid[6] = CBL_MPU6050_ACC_GYRO_BIAS;
+    cpr.mid[0] = ga_mid[0];
+    cpr.mid[1] = ga_mid[1];
+    cpr.mid[2] = ga_mid[2];
+    cpr.mid[3] = ga_mid[3];
+    cpr.mid[4] = ga_mid[4];
+    cpr.mid[5] = ga_mid[5];
+
+    // float m_mid[3] = CBL_MAG3110_BIAS;
+    float m_mid[3] = CBL_HMC5883_BIAS;
+    cpr.mid[6] = m_mid[0];
+    cpr.mid[7] = m_mid[1];
+    cpr.mid[8] = m_mid[2];
+
+    float gain[3] = CBL_MPU6050_ANGLE_RATE_GAIN;
+    cpr.angle_gain_rad[0] = gain[0];
+    cpr.angle_gain_rad[1] = gain[1];
+    cpr.angle_gain_rad[2] = gain[2];
+
+    cpr.gravity_value = CBL_MPU6050_GRAVITY_VALUE;
+
+    // float range[3] =CBL_MAG3110_HALF_RANGE;
+    float range[3] =CBL_HMC5883_HALF_RANGE;
+    cpr.mag_half_range[0] = range[0];
+    cpr.mag_half_range[1] = range[1];
+    cpr.mag_half_range[2] = range[2];
+}
+
 // 飞行时刻气压测量
 void psr_calibrate_at_flying()
 {
@@ -329,15 +372,13 @@ void calibrate_return_data(float * origin_acc, float * origin_angle, float * ori
     // origin_mag[0] = origin_mag[0] - cpr.mid[CLB_MAGX];
     // origin_mag[0] = (origin_mag[0] - cpr.mid[CLB_MAGX])/cpr.mag_half_range[0];
     // 对磁力计数据进行校正
-    origin_mag[0] = 0;
+    origin_mag[0] = (origin_mag[0] - cpr.mid[CLB_MAGX])/cpr.mag_half_range[0];
     origin_mag[1] = (origin_mag[1] - cpr.mid[CLB_MAGY])/cpr.mag_half_range[1];
     origin_mag[2] = (origin_mag[2] - cpr.mid[CLB_MAGZ])/cpr.mag_half_range[2];
 
     // 使用四元数解算角度，对磁力计数据进行纠偏
     if(q1!=0 && q2!=0 && q3!=0 && q4!=0){
-        float as = asin(2*(q1*q3-q2*q4));
-        origin_mag[2] = origin_mag[1]/cos(as);
-        origin_mag[1] = origin_mag[2]/cos(atan(2*(q1*q2+q3*q4)/(1-2*(q2*q2+q3*q3))));
+        // 事实证明无需修正
     }
 
     // 磁力计数据归一化

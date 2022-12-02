@@ -28,7 +28,8 @@ public:
     void target_give(float target);     // 给定量进入
     void pid_update(float estimate);    // 估计量进入，并进行pid参数计算
     void pid_get(float* output);         // 给出具体输出，方便后续环节进行控制，接下来的控制内容交给pid_api
-    void pid_para_change(float p, float i, float d);    // PID 参数更换
+    void pid_para_change(const float* pid);    // PID 参数更换
+    void pid_para_change(float p, float i, float d);    // PID 参数更换(3 float 变量版本重载)
 
 private:
     char target_get = 0;    // 获取给定值后为1

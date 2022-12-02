@@ -9,6 +9,7 @@
 
 // 工具
 #include "toolkit/pid_control.hpp" // TODO 【待删除】 测试库，用处不大，后续可以删掉
+#include "toolkit/pos_velo_estimate_testv1.h" // 位置和速度测试库
 
 // 状态观测器/滤波器
 #include "estimate/Mahony/MahonyAHRS.h"
@@ -20,36 +21,20 @@
 #include "control/PID/pid_base.h"   // pid底层
 #include "control/PID/pid_api.h"    // pid和其他控制器的联合API
 #include "control/ADRC/track_differentiator.h"  // 追踪微分器
+#include "control/Filter_digital/digital_filter.h" // 数字滤波器
+#include "control/PWM/PWM_generator.h"
 
 // 数学库
 #include "math/matrix.h"      // 矩阵计算库
 #include "math/pre_process.h" // 用于起飞前的传感器校准
 #include "math/crc16.h"       // crc16校验库
-#include "math/digital_filter.h" // 数字滤波器
+#include "math/quat.h"
 
 // 传感器接口/驱动
 #include "sensor_socket/sensor_calibrate.h" // 校准库
-#if 1
-
-// IMU
-#include "sensor_socket/gyro_acc/ICM20602.h"
-#include "sensor_socket/gyro_acc/MPU6050.h"
-
-// 磁力计
-#include "sensor_socket/mag/Mag3110.h"
-#include "sensor_socket/mag/IST8310.h"
-#include "sensor_socket/mag/HMC5883.h"
-
-// 气压计
-#include "sensor_socket/pressure/SPL06.h"
-#include "sensor_socket/pressure/BMP180.h"
-
-// GPS
-#include "sensor_socket/GPS/BN880.h"
-
-#else
+#include "sensor_socket/spi/spi.h"
+#include "sensor_socket/i2c/hard_i2c.h"
 #include "sensor_socket/sensor_socket.h"
-#endif
 
 // 通信
 #include "TR/data_feedback.h"  // 暂未解析
@@ -58,5 +43,6 @@
 
 #include "sensor_socket/i2c/hard_i2c.h" // 硬件I2C工具包
 #include "sensor_socket/spi/spi.h"      // spi工具包
+#include "TR/remote_control_v1.h"
 
 #endif // QUA_CONTROL_HEAD_H

@@ -47,40 +47,34 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj: \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Inc/stm32f4xx_hal_uart.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\head.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\toolkit/pid_control.hpp \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate/Mahony/MahonyAHRS.h \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate/Wick/MadgwickAHRS.h \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate/EKF/EKF_update.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\stdlib.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\cstdlib \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\arm-none-eabi\thumb\v7e-m\nofp\bits\c++config.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\arm-none-eabi\thumb\v7e-m\nofp\bits\os_defines.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\arm-none-eabi\thumb\v7e-m\nofp\bits\cpu_defines.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\pstl\pstl_config.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdlib.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\ieeefp.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\toolkit/pos_velo_estimate_testv1.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdio.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\_ansi.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\newlib.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\config.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\ieeefp.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\cdefs.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\lib\gcc\arm-none-eabi\12.2.0\include\stdarg.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\reent.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\_ansi.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\_types.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\_types.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\lock.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\cdefs.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\stdlib.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\alloca.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\bits\std_abs.h \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/control_api.h \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/PID/pid_base.h \
- d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdio.h \
- c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\lib\gcc\arm-none-eabi\12.2.0\include\stdarg.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\sys\stdio.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\math.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\cmath \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\arm-none-eabi\thumb\v7e-m\nofp\bits\c++config.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\arm-none-eabi\thumb\v7e-m\nofp\bits\os_defines.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\arm-none-eabi\thumb\v7e-m\nofp\bits\cpu_defines.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\pstl\pstl_config.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\bits\cpp_type_traits.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\ext\type_traits.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\math.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\bits\std_abs.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\stdlib.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\machine\stdlib.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\alloca.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\bits\specfun.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\bits\stl_algobase.h \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\bits\functexcept.h \
@@ -111,17 +105,34 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj: \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\tr1\poly_hermite.tcc \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\tr1\poly_laguerre.tcc \
  c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\tr1\riemann_zeta.tcc \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\stdlib.h \
+ c:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\arm-none-eabi\include\c++\12.2.0\cstdlib \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate/Mahony/MahonyAHRS.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate/Wick/MadgwickAHRS.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate/EKF/EKF_update.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/control_api.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/PID/pid_api.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/PID/pid_base.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/PID/pid_base.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/PID/pid_api.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/ADRC/track_differentiator.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/Filter_digital/digital_filter.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/PWM/PWM_generator.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math/matrix.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math/pre_process.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math/crc16.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math/quat.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/sensor_calibrate.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/gyro_acc/ICM20602.h \
- d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/sensor_socket.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/gyro_acc/MPU6050.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/gyro_acc/ICM20602.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/mag/Mag3110.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/mag/IST8310.h \
@@ -131,11 +142,15 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj: \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/pressure/BMP180.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/GPS/BN880.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/ultra_sonic/Ultra_sonic.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/spi/spi.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/i2c/hard_i2c.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/sensor_socket.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\TR/data_feedback.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\TR/NGroundStation.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\TR/usart_plus.h \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/i2c/hard_i2c.h \
- d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
- D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket/spi/spi.h
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\TR/remote_control_v1.h

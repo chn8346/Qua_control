@@ -106,6 +106,28 @@ void ICM_get_raw(uint8_t* data)
 
 }
 
+void Icm_process(uint8_t data[12], float* data_)
+{
+    data_[0] = (float)(data[0] + (data[1]<<8));
+    data_[1] = (float)(data[2] + (data[3]<<8));
+    data_[2] = (float)(data[4] + (data[5]<<8));
+    data_[3] = (float)(data[6] + (data[7]<<8));
+    data_[4] = (float)(data[8] + (data[9]<<8));
+    data_[5] = (float)(data[10] + (data[11]<<8));
+}
+
+void ICM_get_6_axis_data(uint8_t *data, float* data_){
+
+    ICM_get_raw(data);
+
+    data_[0] = (float)(data[0] + (data[1]<<8));
+    data_[1] = (float)(data[2] + (data[3]<<8));
+    data_[2] = (float)(data[4] + (data[5]<<8));
+    data_[3] = (float)(data[6] + (data[7]<<8));
+    data_[4] = (float)(data[8] + (data[9]<<8));
+    data_[5] = (float)(data[10] + (data[11]<<8));
+}
+
 void ICM_get_6_axis_data(float* data_)
 {
     uint8_t data[12];

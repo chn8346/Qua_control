@@ -5,6 +5,8 @@
 #ifndef QUA_CONTROL_MATRIX_H
 #define QUA_CONTROL_MATRIX_H
 
-#define dt 400
+class Matrix{
+
+};
 
 #endif //QUA_CONTROL_MATRIX_H

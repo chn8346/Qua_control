@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f4xx_it.h"
+#include "base_head.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -42,10 +43,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern UART_HandleTypeDef * uart_pc;
-extern TIM_HandleTypeDef * htim1_it;
-extern UART_HandleTypeDef * uart_gps;
-extern uint8_t send_sgn;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,13 +57,30 @@ extern uint8_t send_sgn;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern TIM_HandleTypeDef htim6;
+extern TIM_HandleTypeDef htim7;
 extern UART_HandleTypeDef huart4;
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart6;
 /* USER CODE BEGIN EV */
+extern ADC_HandleTypeDef hadc1;
 
+extern UART_HandleTypeDef * uart_pc;
+extern TIM_HandleTypeDef * htim1_it;
+extern UART_HandleTypeDef * uart_gps;
+
+// adc value
+extern uint32_t battery_raw_value;
+extern uint32_t times;
+
+// 采样信号
+extern int    send_sgn;
+
+// PPM
+extern uint8_t PPM_data_index;    // 目前的ppm长度
+extern uint32_t PPM_data[]; // PPM数据
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -262,6 +277,37 @@ void UART4_IRQHandler(void)
 }
 
 /**
+  * @brief This function handles TIM6 global interrupt, DAC1 and DAC2 underrun error interrupts.
+  */
+void TIM6_DAC_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
+  // 采样中断
+  send_sgn = 1;
+    //HAL_GPIO_TogglePin(GPIOC, LED1_Pin);
+  HAL_NVIC_ClearPendingIRQ(TIM6_DAC_IRQn);
+  /* USER CODE END TIM6_DAC_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim6);
+  /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+
+  /* USER CODE END TIM6_DAC_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM7 global interrupt.
+  */
+void TIM7_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM7_IRQn 0 */
+
+  /* USER CODE END TIM7_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim7);
+  /* USER CODE BEGIN TIM7_IRQn 1 */
+
+  /* USER CODE END TIM7_IRQn 1 */
+}
+
+/**
   * @brief This function handles USART6 global interrupt.
   */
 void USART6_IRQHandler(void)
@@ -280,9 +326,38 @@ void USART6_IRQHandler(void)
 
 void TIM1_UP_TIM10_IRQHandler(void)
 {
-    send_sgn = 0x0f;
+//    send_sgn = 0x0f;
     HAL_TIM_IRQHandler(htim1_it);
-    HAL_NVIC_ClearPendingIRQ(TIM1_UP_TIM10_IRQn);
+//    HAL_NVIC_ClearPendingIRQ(TIM1_UP_TIM10_IRQn);
+}
+
+void EXTI15_10_IRQHandler(void)
+{
+    uint32_t data;
+
+    HAL_TIM_Base_Stop(&htim7); // 停止计时，统计时间
+
+    data = htim7.Instance->CNT;
+    __HAL_TIM_SET_COUNTER(&htim7, 0);
+
+    HAL_TIM_Base_Start(&htim7); // 开始计时
+
+    PPM_data[PPM_data_index] = data;    // 获取数值，注意，index = 0 只在第一次，
+    PPM_data_index = (PPM_data_index + 1) % 10 ; //PPM_data_len_limit;  // 修改PPM数据位置
+    if(PPM_data_index == 0)PPM_data_index=1;
+
+    // TODO [移植提示] pin直接写了15，因为PPM从PE15进入，如果有变动这里需要修改
+    __HAL_GPIO_EXTI_CLEAR_IT(GPIO_PIN_15);
+}
+
+void ADC_IRQHandler(void)
+{
+    battery_raw_value = HAL_ADC_GetValue(&hadc1); //(uint32_t)random();
+    battery_raw_value = battery_raw_value + times;
+    times = times + 1;
+    HAL_ADC_IRQHandler(&hadc1);
+    //__HAL_ADC_ENABLE_IT(&hadc1, ADC_IT_EOC);
+   // HAL_NVIC_EnableIRQ(ADC_IRQn);
 }
 
 

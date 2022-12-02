@@ -176,6 +176,30 @@ Core/Src/TR/data_feedback.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/TR/data_feedback.c.s
 .PHONY : Core/Src/TR/data_feedback.c.s
 
+Core/Src/TR/remote_control_v1.obj: Core/Src/TR/remote_control_v1.cpp.obj
+.PHONY : Core/Src/TR/remote_control_v1.obj
+
+# target to build an object file
+Core/Src/TR/remote_control_v1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/TR/remote_control_v1.cpp.obj
+.PHONY : Core/Src/TR/remote_control_v1.cpp.obj
+
+Core/Src/TR/remote_control_v1.i: Core/Src/TR/remote_control_v1.cpp.i
+.PHONY : Core/Src/TR/remote_control_v1.i
+
+# target to preprocess a source file
+Core/Src/TR/remote_control_v1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/TR/remote_control_v1.cpp.i
+.PHONY : Core/Src/TR/remote_control_v1.cpp.i
+
+Core/Src/TR/remote_control_v1.s: Core/Src/TR/remote_control_v1.cpp.s
+.PHONY : Core/Src/TR/remote_control_v1.s
+
+# target to generate assembly for a file
+Core/Src/TR/remote_control_v1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/TR/remote_control_v1.cpp.s
+.PHONY : Core/Src/TR/remote_control_v1.cpp.s
+
 Core/Src/TR/usart_plus.obj: Core/Src/TR/usart_plus.cpp.obj
 .PHONY : Core/Src/TR/usart_plus.obj
 
@@ -224,6 +248,30 @@ Core/Src/control/ADRC/track_differentiator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/ADRC/track_differentiator.cpp.s
 .PHONY : Core/Src/control/ADRC/track_differentiator.cpp.s
 
+Core/Src/control/Filter_digital/digital_filter.obj: Core/Src/control/Filter_digital/digital_filter.cpp.obj
+.PHONY : Core/Src/control/Filter_digital/digital_filter.obj
+
+# target to build an object file
+Core/Src/control/Filter_digital/digital_filter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/Filter_digital/digital_filter.cpp.obj
+.PHONY : Core/Src/control/Filter_digital/digital_filter.cpp.obj
+
+Core/Src/control/Filter_digital/digital_filter.i: Core/Src/control/Filter_digital/digital_filter.cpp.i
+.PHONY : Core/Src/control/Filter_digital/digital_filter.i
+
+# target to preprocess a source file
+Core/Src/control/Filter_digital/digital_filter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/Filter_digital/digital_filter.cpp.i
+.PHONY : Core/Src/control/Filter_digital/digital_filter.cpp.i
+
+Core/Src/control/Filter_digital/digital_filter.s: Core/Src/control/Filter_digital/digital_filter.cpp.s
+.PHONY : Core/Src/control/Filter_digital/digital_filter.s
+
+# target to generate assembly for a file
+Core/Src/control/Filter_digital/digital_filter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/Filter_digital/digital_filter.cpp.s
+.PHONY : Core/Src/control/Filter_digital/digital_filter.cpp.s
+
 Core/Src/control/PID/pid_api.obj: Core/Src/control/PID/pid_api.cpp.obj
 .PHONY : Core/Src/control/PID/pid_api.obj
 
@@ -271,6 +319,30 @@ Core/Src/control/PID/pid_base.s: Core/Src/control/PID/pid_base.cpp.s
 Core/Src/control/PID/pid_base.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/PID/pid_base.cpp.s
 .PHONY : Core/Src/control/PID/pid_base.cpp.s
+
+Core/Src/control/PWM/PWM_generator.obj: Core/Src/control/PWM/PWM_generator.cpp.obj
+.PHONY : Core/Src/control/PWM/PWM_generator.obj
+
+# target to build an object file
+Core/Src/control/PWM/PWM_generator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/PWM/PWM_generator.cpp.obj
+.PHONY : Core/Src/control/PWM/PWM_generator.cpp.obj
+
+Core/Src/control/PWM/PWM_generator.i: Core/Src/control/PWM/PWM_generator.cpp.i
+.PHONY : Core/Src/control/PWM/PWM_generator.i
+
+# target to preprocess a source file
+Core/Src/control/PWM/PWM_generator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/PWM/PWM_generator.cpp.i
+.PHONY : Core/Src/control/PWM/PWM_generator.cpp.i
+
+Core/Src/control/PWM/PWM_generator.s: Core/Src/control/PWM/PWM_generator.cpp.s
+.PHONY : Core/Src/control/PWM/PWM_generator.s
+
+# target to generate assembly for a file
+Core/Src/control/PWM/PWM_generator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/PWM/PWM_generator.cpp.s
+.PHONY : Core/Src/control/PWM/PWM_generator.cpp.s
 
 Core/Src/control/control_api.obj: Core/Src/control/control_api.cpp.obj
 .PHONY : Core/Src/control/control_api.obj
@@ -416,30 +488,6 @@ Core/Src/math/crc16.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.s
 .PHONY : Core/Src/math/crc16.cpp.s
 
-Core/Src/math/digital_filter.obj: Core/Src/math/digital_filter.cpp.obj
-.PHONY : Core/Src/math/digital_filter.obj
-
-# target to build an object file
-Core/Src/math/digital_filter.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/digital_filter.cpp.obj
-.PHONY : Core/Src/math/digital_filter.cpp.obj
-
-Core/Src/math/digital_filter.i: Core/Src/math/digital_filter.cpp.i
-.PHONY : Core/Src/math/digital_filter.i
-
-# target to preprocess a source file
-Core/Src/math/digital_filter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/digital_filter.cpp.i
-.PHONY : Core/Src/math/digital_filter.cpp.i
-
-Core/Src/math/digital_filter.s: Core/Src/math/digital_filter.cpp.s
-.PHONY : Core/Src/math/digital_filter.s
-
-# target to generate assembly for a file
-Core/Src/math/digital_filter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/digital_filter.cpp.s
-.PHONY : Core/Src/math/digital_filter.cpp.s
-
 Core/Src/math/matrix.obj: Core/Src/math/matrix.cpp.obj
 .PHONY : Core/Src/math/matrix.obj
 
@@ -487,6 +535,30 @@ Core/Src/math/pre_process.s: Core/Src/math/pre_process.cpp.s
 Core/Src/math/pre_process.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.s
 .PHONY : Core/Src/math/pre_process.cpp.s
+
+Core/Src/math/quat.obj: Core/Src/math/quat.cpp.obj
+.PHONY : Core/Src/math/quat.obj
+
+# target to build an object file
+Core/Src/math/quat.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.obj
+.PHONY : Core/Src/math/quat.cpp.obj
+
+Core/Src/math/quat.i: Core/Src/math/quat.cpp.i
+.PHONY : Core/Src/math/quat.i
+
+# target to preprocess a source file
+Core/Src/math/quat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.i
+.PHONY : Core/Src/math/quat.cpp.i
+
+Core/Src/math/quat.s: Core/Src/math/quat.cpp.s
+.PHONY : Core/Src/math/quat.s
+
+# target to generate assembly for a file
+Core/Src/math/quat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.s
+.PHONY : Core/Src/math/quat.cpp.s
 
 Core/Src/sensor_socket/GPS/BN880.obj: Core/Src/sensor_socket/GPS/BN880.cpp.obj
 .PHONY : Core/Src/sensor_socket/GPS/BN880.obj
@@ -776,6 +848,30 @@ Core/Src/sensor_socket/spi/spi.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.s
 .PHONY : Core/Src/sensor_socket/spi/spi.cpp.s
 
+Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.obj: Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj
+.PHONY : Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.obj
+
+# target to build an object file
+Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj
+.PHONY : Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj
+
+Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.i: Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.i
+.PHONY : Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.i
+
+# target to preprocess a source file
+Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.i
+.PHONY : Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.i
+
+Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.s: Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.s
+.PHONY : Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.s
+
+# target to generate assembly for a file
+Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.s
+.PHONY : Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.s
+
 Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
 .PHONY : Core/Src/stm32f4xx_hal_msp.obj
 
@@ -919,6 +1015,30 @@ Core/Src/toolkit/pid_control.s: Core/Src/toolkit/pid_control.cpp.s
 Core/Src/toolkit/pid_control.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.s
 .PHONY : Core/Src/toolkit/pid_control.cpp.s
+
+Core/Src/toolkit/pos_velo_estimate_testv1.obj: Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj
+.PHONY : Core/Src/toolkit/pos_velo_estimate_testv1.obj
+
+# target to build an object file
+Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj
+.PHONY : Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj
+
+Core/Src/toolkit/pos_velo_estimate_testv1.i: Core/Src/toolkit/pos_velo_estimate_testv1.cpp.i
+.PHONY : Core/Src/toolkit/pos_velo_estimate_testv1.i
+
+# target to preprocess a source file
+Core/Src/toolkit/pos_velo_estimate_testv1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.i
+.PHONY : Core/Src/toolkit/pos_velo_estimate_testv1.cpp.i
+
+Core/Src/toolkit/pos_velo_estimate_testv1.s: Core/Src/toolkit/pos_velo_estimate_testv1.cpp.s
+.PHONY : Core/Src/toolkit/pos_velo_estimate_testv1.s
+
+# target to generate assembly for a file
+Core/Src/toolkit/pos_velo_estimate_testv1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.s
+.PHONY : Core/Src/toolkit/pos_velo_estimate_testv1.cpp.s
 
 Core/Startup/startup_stm32f407vetx.obj: Core/Startup/startup_stm32f407vetx.s.obj
 .PHONY : Core/Startup/startup_stm32f407vetx.obj
@@ -1519,18 +1639,27 @@ help:
 	@echo ... Core/Src/TR/data_feedback.obj
 	@echo ... Core/Src/TR/data_feedback.i
 	@echo ... Core/Src/TR/data_feedback.s
+	@echo ... Core/Src/TR/remote_control_v1.obj
+	@echo ... Core/Src/TR/remote_control_v1.i
+	@echo ... Core/Src/TR/remote_control_v1.s
 	@echo ... Core/Src/TR/usart_plus.obj
 	@echo ... Core/Src/TR/usart_plus.i
 	@echo ... Core/Src/TR/usart_plus.s
 	@echo ... Core/Src/control/ADRC/track_differentiator.obj
 	@echo ... Core/Src/control/ADRC/track_differentiator.i
 	@echo ... Core/Src/control/ADRC/track_differentiator.s
+	@echo ... Core/Src/control/Filter_digital/digital_filter.obj
+	@echo ... Core/Src/control/Filter_digital/digital_filter.i
+	@echo ... Core/Src/control/Filter_digital/digital_filter.s
 	@echo ... Core/Src/control/PID/pid_api.obj
 	@echo ... Core/Src/control/PID/pid_api.i
 	@echo ... Core/Src/control/PID/pid_api.s
 	@echo ... Core/Src/control/PID/pid_base.obj
 	@echo ... Core/Src/control/PID/pid_base.i
 	@echo ... Core/Src/control/PID/pid_base.s
+	@echo ... Core/Src/control/PWM/PWM_generator.obj
+	@echo ... Core/Src/control/PWM/PWM_generator.i
+	@echo ... Core/Src/control/PWM/PWM_generator.s
 	@echo ... Core/Src/control/control_api.obj
 	@echo ... Core/Src/control/control_api.i
 	@echo ... Core/Src/control/control_api.s
@@ -1549,15 +1678,15 @@ help:
 	@echo ... Core/Src/math/crc16.obj
 	@echo ... Core/Src/math/crc16.i
 	@echo ... Core/Src/math/crc16.s
-	@echo ... Core/Src/math/digital_filter.obj
-	@echo ... Core/Src/math/digital_filter.i
-	@echo ... Core/Src/math/digital_filter.s
 	@echo ... Core/Src/math/matrix.obj
 	@echo ... Core/Src/math/matrix.i
 	@echo ... Core/Src/math/matrix.s
 	@echo ... Core/Src/math/pre_process.obj
 	@echo ... Core/Src/math/pre_process.i
 	@echo ... Core/Src/math/pre_process.s
+	@echo ... Core/Src/math/quat.obj
+	@echo ... Core/Src/math/quat.i
+	@echo ... Core/Src/math/quat.s
 	@echo ... Core/Src/sensor_socket/GPS/BN880.obj
 	@echo ... Core/Src/sensor_socket/GPS/BN880.i
 	@echo ... Core/Src/sensor_socket/GPS/BN880.s
@@ -1594,6 +1723,9 @@ help:
 	@echo ... Core/Src/sensor_socket/spi/spi.obj
 	@echo ... Core/Src/sensor_socket/spi/spi.i
 	@echo ... Core/Src/sensor_socket/spi/spi.s
+	@echo ... Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.obj
+	@echo ... Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.i
+	@echo ... Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.s
 	@echo ... Core/Src/stm32f4xx_hal_msp.obj
 	@echo ... Core/Src/stm32f4xx_hal_msp.i
 	@echo ... Core/Src/stm32f4xx_hal_msp.s
@@ -1612,6 +1744,9 @@ help:
 	@echo ... Core/Src/toolkit/pid_control.obj
 	@echo ... Core/Src/toolkit/pid_control.i
 	@echo ... Core/Src/toolkit/pid_control.s
+	@echo ... Core/Src/toolkit/pos_velo_estimate_testv1.obj
+	@echo ... Core/Src/toolkit/pos_velo_estimate_testv1.i
+	@echo ... Core/Src/toolkit/pos_velo_estimate_testv1.s
 	@echo ... Core/Startup/startup_stm32f407vetx.obj
 	@echo ... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj
 	@echo ... Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i

@@ -90,6 +90,7 @@ void Error_Handler(void);
 # define SD_LED_OFF  HAL_GPIO_WritePin(TF_DET_LED_PORT, TF_DET_LED_PIN, GPIO_PIN_SET);
 # define SD_LED_ON  HAL_GPIO_WritePin(TF_DET_LED_PORT, TF_DET_LED_PIN, GPIO_PIN_RESET);
 
+// void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc);
 
 /* USER CODE END Private defines */
 

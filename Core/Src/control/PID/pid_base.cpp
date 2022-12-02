@@ -115,6 +115,12 @@ void pid_base::reset_() {
     this->d_limit_flag = 0;
 }
 
+void pid_base::pid_para_change(const float* pid) {
+    this->P = pid[0];
+    this->I = pid[1];
+    this->D = pid[2];
+}
+
 void pid_base::pid_para_change(float p, float i, float d) {
     this->P = p;
     this->I = i;
