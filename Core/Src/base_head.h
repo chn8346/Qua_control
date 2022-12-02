@@ -36,9 +36,6 @@ typedef struct{
 
 #define Pi          3.1415926
 
-#define PITCH_ANGLE_LIMIT   0.174  // 小于10度
-#define ROLL_ANGLE_LIMIT    0.174  // 小于10度
-
 // 飞行器参数
 #define Qua_MASS                2.0     // 飞行器质量
 #define Qua_Kf                  0.001   // 飞行器拉力系数
@@ -49,6 +46,14 @@ typedef struct{
 // 控制器类型
 #define CONTROLLER_TYPE_PID     0x0F
 #define CONTROLLER_TYPE_ADRC    0xAF
+
+// LIMIT 飞行器控制限幅
+#define PITCH_LIMIT_DEGREE      10      // pitch角度限幅 -- 角度制
+#define ROLL_LIMIT_DEGREE       10      // roll角度限幅  -- 角度制
+// #define YAW_LIMIT_DEGREE        10      // yaw角度限幅   -- 角度制
+
+#define PITCH_LIMIT_RAD   0.174  // 小于10度
+#define ROLL_LIMIT_RAD    0.174  // 小于10度
 
 // PWM
 #define PWM_FREQ                50                // PWM输出频率(Hz)

@@ -6,6 +6,9 @@
 
 uint8_t zero_pos = 1; // 指向数据头的位置
 
+// 油门临界起飞点
+float force_zero = REMOTE_CONTROL_LOW_PPM_usf + Qua_TAKE_OFF_P*REMOTE_CONTROL_DIAMETER_PPM_usf;
+
 void remote_control_phase(uint32_t* ppm_data, float* ppm_phased){
     // ppm摇杆数据
     int temp = zero_pos + 1;
@@ -23,18 +26,19 @@ void remote_control_phase(uint32_t* ppm_data, float* ppm_phased){
     ppm_phased[3] = (float)ppm_data[temp];         // CH4
 
     // 解析百分比数据
-    ppm_phased[PPM_CH_FORCE] = (ppm_phased[PPM_CH_FORCE] - REMOTE_CONTROL_LOW_PPM_usf)/REMOTE_CONTROL_DIAMETER_PPM_usf;
-                                                                      //  注意这个地方上下不一样
+    ppm_phased[PPM_CH_FORCE] =(ppm_phased[PPM_CH_FORCE] - force_zero)/REMOTE_CONTROL_RADIUS_PPM_usf;
+
     ppm_phased[PPM_CH_PITCH] = (ppm_phased[PPM_CH_PITCH] - REMOTE_CONTROL_MID_PPM_usf)/REMOTE_CONTROL_RADIUS_PPM_usf;
     ppm_phased[PPM_CH_YAW]   = (ppm_phased[PPM_CH_YAW]   - REMOTE_CONTROL_MID_PPM_usf)/REMOTE_CONTROL_RADIUS_PPM_usf;
     ppm_phased[PPM_CH_ROLL]  = (ppm_phased[PPM_CH_ROLL]  - REMOTE_CONTROL_MID_PPM_usf)/REMOTE_CONTROL_RADIUS_PPM_usf;
-
-
 }
 
 // 获取信息头的位置
 uint16_t REMOTE_CONTROL_get_zero_index(uint32_t data[], uint16_t len){
-    remote_max_in_list(data, len);
+    // 等待内八的数值最大值大于单帧最大值
+    while(data[zero_pos] < REMOTE_CONTROL_FRAME_LEN_PPM_us)
+        remote_max_in_list(data, len);
+
     return zero_pos;
 }
 

@@ -35,6 +35,7 @@ void controller::change_target(uint8_t index, float target_pos_angle) {
     this->pid_api.INPUT_target(index, target_pos_angle);
 }
 
+
 #elif CONTROL_MODE == CONTROL_MODE_ADRC // 使用ADRC控制器
 
 

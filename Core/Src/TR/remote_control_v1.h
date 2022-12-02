@@ -13,6 +13,7 @@
 #define REMOTE_CONTROL_TOP_PPM_us       1800    // 整数--- 遥控器的pwm最大值
 #define REMOTE_CONTROL_DIAMETER_PPM_us  900     // 整数--- 遥控器的pwm直径
 #define REMOTE_CONTROL_RADIUS_PPM_us    450     // 整数--- 遥控器的pwm半径
+#define REMOTE_CONTROL_FRAME_LEN_PPM_us 2000    // 整数--- 单帧的最大值
 
 #define REMOTE_CONTROL_MID_PPM_usf          (float)1350.0    // 浮点--- 遥控器的中位值
 #define REMOTE_CONTROL_DEATH_PPM_usf        (float)20.0      // 浮点--- 遥控器的死区半径
@@ -20,6 +21,7 @@
 #define REMOTE_CONTROL_TOP_PPM_usf          (float)1800.0    // 浮点--- 遥控器的pwm最大值
 #define REMOTE_CONTROL_DIAMETER_PPM_usf     (float)900.0     // 浮点--- 遥控器的pwm直径
 #define REMOTE_CONTROL_RADIUS_PPM_usf       (float)450.0     // 浮点--- 遥控器的pwm半径
+#define REMOTE_CONTROL_FRAME_LEN_PPM_usf    (float)2000.0    // 浮点--- 单帧的最大值
 
 
 // 遥控器解析
@@ -32,6 +34,5 @@ uint16_t REMOTE_CONTROL_get_zero_index(uint32_t* data, uint16_t len);
 
 // 遥控器所有数据中找最大值
 void remote_max_in_list(uint32_t* data, uint16_t len);
-
 
 #endif //QUA_CONTROL_REMOTE_CONTROL_V1_H

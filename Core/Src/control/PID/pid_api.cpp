@@ -27,32 +27,42 @@ void pid_API::init_PID_API(float* pos_x_pid_parameter,
     this->yaw_pid.pid_para_change(yaw_pid_parameter);
 
     // 目标值保存到类内成员
-    this->target_pos_angle[0] = target_pos_n_angle[0];
-    this->target_pos_angle[1] = target_pos_n_angle[1];
-    this->target_pos_angle[2] = target_pos_n_angle[2];
-    this->target_pos_angle[3] = 0;
-    this->target_pos_angle[4] = 0;
-    this->target_pos_angle[5] = target_pos_n_angle[5];
+    this->target_pos_angle[PID_API_INDEX_POSX]  = target_pos_n_angle[PID_API_INDEX_POSX];
+    this->target_pos_angle[PID_API_INDEX_POSY]  = target_pos_n_angle[PID_API_INDEX_POSY];
+    this->target_pos_angle[PID_API_INDEX_POSZ]  = target_pos_n_angle[PID_API_INDEX_POSZ];
+    this->target_pos_angle[PID_API_INDEX_PITCH] = target_pos_n_angle[PID_API_INDEX_PITCH];
+    this->target_pos_angle[PID_API_INDEX_ROLL]  = target_pos_n_angle[PID_API_INDEX_ROLL];
+    this->target_pos_angle[PID_API_INDEX_YAW]   = target_pos_n_angle[PID_API_INDEX_YAW];
 
     // 修改目标值
-    this->x_pid.target_give(this->target_pos_angle[0]);
-    this->y_pid.target_give(this->target_pos_angle[1]);
-    this->z_pid.target_give(this->target_pos_angle[2]);
-    this->pitch_pid.target_give(this->target_pos_angle[3]);
-    this->roll_pid.target_give(this->target_pos_angle[4]);
-    this->yaw_pid.target_give(this->target_pos_angle[5]);
+    this->x_pid.target_give(this->target_pos_angle[PID_API_INDEX_POSX]);
+    this->y_pid.target_give(this->target_pos_angle[PID_API_INDEX_POSY]);
+    this->z_pid.target_give(this->target_pos_angle[PID_API_INDEX_POSZ]);
+    this->pitch_pid.target_give(this->target_pos_angle[PID_API_INDEX_PITCH]);
+    this->roll_pid.target_give(this->target_pos_angle[PID_API_INDEX_ROLL]);
+    this->yaw_pid.target_give(this->target_pos_angle[PID_API_INDEX_YAW]);
 
     // 更改数据修改情况
     this->get_data_condition = 1;
 }
 
 void pid_API::INPUT_target(float pos_angle_target[6]) {
-    this->target_pos_angle[0] = pos_angle_target[0];
-    this->target_pos_angle[1] = pos_angle_target[1];
-    this->target_pos_angle[2] = pos_angle_target[2];
-    this->target_pos_angle[3] = pos_angle_target[3];
-    this->target_pos_angle[4] = pos_angle_target[4];
-    this->target_pos_angle[5] = pos_angle_target[5];
+    // TODO 【后续需要补充】 角度限幅
+
+
+    // 类内临时数值 赋值
+    this->target_pos_angle[PID_API_INDEX_POSX] = pos_angle_target[PID_API_INDEX_POSX];
+    this->target_pos_angle[PID_API_INDEX_POSY] = pos_angle_target[PID_API_INDEX_POSY];
+    this->target_pos_angle[PID_API_INDEX_POSZ] = pos_angle_target[PID_API_INDEX_POSZ];
+    this->target_pos_angle[PID_API_INDEX_PITCH] = pos_angle_target[PID_API_INDEX_PITCH];
+    this->target_pos_angle[PID_API_INDEX_ROLL] = pos_angle_target[PID_API_INDEX_ROLL];
+    this->target_pos_angle[PID_API_INDEX_YAW] = pos_angle_target[PID_API_INDEX_YAW];
+
+    // 目标导入
+    this->z_pid.target_give(this->target_pos_angle[PID_API_INDEX_POSZ]);
+    this->yaw_pid.target_give(this->target_pos_angle[PID_API_INDEX_YAW]);
+    this->roll_pid.target_give(this->target_pos_angle[PID_API_INDEX_ROLL]);
+    this->pitch_pid.target_give(this->target_pos_angle[PID_API_INDEX_PITCH]);
 
     // 更改数据修改指示
     this->get_data_condition = this->get_data_condition | 0x01;
@@ -66,6 +76,7 @@ void pid_API::INPUT_target(int PID_API_INDEX, float value) {
 }
 
 void pid_API::INPUT_estimate(float pos_angle_esti[6]) {
+
     this->estimate_pos_angle[0] = pos_angle_esti[0];
     this->estimate_pos_angle[1] = pos_angle_esti[1];
     this->estimate_pos_angle[2] = pos_angle_esti[2];
@@ -174,6 +185,26 @@ void pid_API::position_control() {
 
 // 轨迹生成
 void pid_API::traject_gen_control() {
+
+}
+
+
+#define PID_API_remote_gen_target_POSZ_LIMIT  1.0
+#define PID_API_remote_gen_target_YAW_LIMIT   0.01
+
+void PID_API_remote_control_gen_target(float* ppm_phased, float * target){
+    // 高度 -- 高于起飞油门时刻，target是正的，否则是负的
+    target[PID_API_INDEX_POSZ] = ppm_phased[PPM_CH_FORCE]*(float)PID_API_remote_gen_target_POSZ_LIMIT;
+
+    // pitch -- 位置形式
+    target[PID_API_INDEX_PITCH] = ppm_phased[PPM_CH_PITCH]*(float)PITCH_LIMIT_RAD;
+
+    // roll -- 位置形式
+    target[PID_API_INDEX_ROLL] = ppm_phased[PPM_CH_ROLL]*(float)ROLL_LIMIT_RAD;
+
+    // yaw -- yaw是积分形式
+    target[PID_API_INDEX_YAW] =
+            target[PID_API_INDEX_YAW] + ppm_phased[PPM_CH_YAW]*(float)PID_API_remote_gen_target_YAW_LIMIT;
 
 }
 

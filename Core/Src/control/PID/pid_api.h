@@ -90,6 +90,9 @@ class pid_API{
 
 };
 
+// 通过遥控器百分比,生成需要的目标值
+void PID_API_remote_control_gen_target(float* ppm_phased, float * target);
+
 #elif CONTROL_PID_MODEL == CONTROL_PID_MODEL_STAY   // 角度环稳定测试
 
     // 姿态控制器

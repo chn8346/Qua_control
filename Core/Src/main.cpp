@@ -78,6 +78,7 @@ uint32_t times = 0;
 volatile uint8_t PPM_data_index = 0;    // 目前的ppm长度
 uint32_t PPM_data[PPM_data_len_limit+1] ={5000, 5000, 5000, 5000, 5000, 5000,
                      5000, 5000, 5000, 5000, 5000}; // PPM数据
+float PPM_precent_float[PPM_data_len_limit+1] = {0.0};      // PPM解析的百分比
 
 // ultra sonic
 volatile uint8_t sonic_data_length = 0;  // 长度为2时输出超声波数据
@@ -122,6 +123,7 @@ uint8_t str_len_(const char * x){int i;while(x[i++]);return i;}
 
 static void IT_Init(void);          // 中断启动
 static void init_hard_ware(void);  // PWM生成启动
+
 
 /* USER CODE END PFP */
 
@@ -245,8 +247,11 @@ int main(void)
                                0.1, 0, 1,
                                0.1, 0, 1};
 
-    // 初始状态的姿态和位置目标
-    float init_target[6] = {0, 0, 0, 0, 0, 0};
+    // 这个给到每次的PID更新
+    float estimate_data[6] = {0.0,0.0,0.0,0.0,0.0,0.0}; // 状态容器，测量的姿态和位置数据从这里导入到PID_API
+
+    // 这个目标值给到PID控制器
+    float target_data[6]   = {0.0,0.0,0.0,0.0,0.0,0.0}; // 目标放置处
 
     // pid控制器初始化，导入pid参数和目标
     pid_controller.init_PID_API(pid_parameter,
@@ -255,11 +260,7 @@ int main(void)
                                 pid_parameter+9,
                                 pid_parameter+12,
                                 pid_parameter+15,
-                                init_target);
-
-
-    // 这个给到每次的PID更新
-    float estimate_data[6]={0.0,0.0,0.0,0.0,0.0,0.0}; // 状态容器，测量的姿态和位置数据从这里导入到PID_API
+                                target_data);
 
     // 这个是从更新里面取数据的变量
     float Qua_pwm_rate[4] = {0,0,0,0};                        // 占空比(也就是油门),PID控制器给出
@@ -275,8 +276,10 @@ int main(void)
     float mag_fdata[3];     // MAG
     float mag_data_f[3] = {0,0,0};
 
+    // 重置遥控器数据
+    for(int i = 1; i < 10; i++)PPM_data[i] = 5000;
 
-    // 这里等待遥控器连上飞控
+    // 这里等待遥控器连上飞控,如果飞控连接成功，在上面重置之后，这里会很快重新写上数值
     while(PPM_data[0] == 5000 ||
             PPM_data[1] == 5000 ||
             PPM_data[2] == 5000 ||
@@ -288,15 +291,19 @@ int main(void)
             PPM_data[8] == 5000 ||
             PPM_data[9] == 5000);
 
-    // 遥控器完成连接之后，测量最大值
-//    uint16_t dy = 300; // 延时三秒
-//    while(dy){
-//        if(send_sgn != 0){
-//            dy = dy - 1;
-//            send_sgn = 0;
-//        }
-//    }
-//    REMOTE_CONTROL_get_zero_index(PPM_data, 11);
+    // 遥控器完成连接之后，延迟1秒后测量最大值
+    uint16_t dy = 100; // 延时1秒
+    while(dy){
+        if(send_sgn != 0){
+            dy = dy - 1;
+            send_sgn = 0;
+        }
+    }
+
+    // 这时需要遥控器内八，这样才能继续，因为这样才能测量到实际的信息头部位置
+    // 注意，内部有检测的死循环，达到要求才会继续
+    REMOTE_CONTROL_get_zero_index(PPM_data, 11);
+
 
     /* USER CODE END 2 */
 
@@ -353,10 +360,17 @@ int main(void)
 
           /* 控制器更新 */
           // 填入estimate数值
-          estimate_data[PID_API_INDEX_PITCH] = pitch;
+          estimate_data[PID_API_INDEX_PITCH] = pitch;   // 注意！！！！ 控制用的是弧度
           estimate_data[PID_API_INDEX_ROLL] = roll;
           estimate_data[PID_API_INDEX_YAW] = yaw;
           pid_controller.INPUT_estimate(estimate_data);
+
+          // 根据遥控器进行目标生成
+          remote_control_phase(PPM_data, PPM_precent_float);
+          PID_API_remote_control_gen_target(PPM_precent_float, target_data);
+          // 填入预期
+          pid_controller.INPUT_target(target_data);
+
 
           // 姿态控制器
           pid_controller.PROCESS_update();
@@ -373,8 +387,9 @@ int main(void)
               LED1_TOGGLE;
 
               char msg[150] = {0};
-
-#if 0
+#if 1
+              sprintf(msg, "pitch=%f,roll=%f,yaw=%f,bt=%lu",pitch*rd, roll*rd, yaw*rd, battery_raw_value);
+#elif 0
               sprintf(msg, "pitch=%f,roll=%f,yaw=%f,bt=%lu",pitch*rd, roll*rd, yaw*rd, battery_raw_value);
 #elif 1
               sprintf(msg, "PPM,CH1=%lu,CH2=%lu,CH3=%lu,CH4=%lu,CH5=%lu,CH6=%lu,CH7=%lu,CH8=%lu,CH9=%lu,CH10=%lu,SUM=%lu,",
