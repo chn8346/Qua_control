@@ -22,7 +22,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "head.h"
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -52,8 +51,6 @@ SPI_HandleTypeDef hspi2;
 
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
-TIM_HandleTypeDef htim6;
-TIM_HandleTypeDef htim7;
 
 UART_HandleTypeDef huart4;
 UART_HandleTypeDef huart1;
@@ -67,26 +64,9 @@ volatile TIM_HandleTypeDef * htim1_it;
 volatile UART_HandleTypeDef * uart_gps;
 volatile uint8_t u1rx_buff[32];
 volatile uint8_t u2rx_buff[32];
-volatile uint8_t u3rx_buff[32];
-volatile int     send_sgn = 0;
-
-// 电压测量
-volatile uint32_t battery_raw_value;
-uint32_t times = 0;
-
-// PPM
-volatile uint8_t PPM_data_index = 0;    // 目前的ppm长度
-uint32_t PPM_data[PPM_data_len_limit+1] ={5000, 5000, 5000, 5000, 5000, 5000,
-                     5000, 5000, 5000, 5000, 5000}; // PPM数据
-
-// ultra sonic
-volatile uint8_t sonic_data_length = 0;  // 长度为2时输出超声波数据
-volatile uint16_t sonic_data16;
-float distance_ultra_sonic = 0;
+volatile uint8_t send_sgn = 0;
 
 extern float q0x,q1x,q2x,q3x;
-
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,23 +85,22 @@ static void MX_USART1_UART_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USART6_UART_Init(void);
-static void MX_TIM6_Init(void); // sample
-static void MX_TIM7_Init(void); // PPM
 /* USER CODE BEGIN PFP */
 
-void uart1_transmit(uint8_t* data, uint8_t len);
-void uart1_transmit_with_next(uint8_t* data, uint8_t len);
-void print(const char* data, uint8_t len);
-void uart2_transmit(uint8_t* data, uint8_t len);
-void uart2_transmit_with_next(uint8_t* data, uint8_t len);
-void uart6_transmit(uint8_t* data, uint8_t len);
-void uart6_transmit_with_next(uint8_t* data, uint8_t len);
+//void uart1_transmit(uint8_t* data, uint8_t len);
+//void uart1_transmit_with_next(uint8_t* data, uint8_t len);
+//void print(const char* data, uint8_t len);
+//void uart2_transmit(uint8_t* data, uint8_t len);
+//void uart2_transmit_with_next(uint8_t* data, uint8_t len);
+//void uart6_transmit(uint8_t* data, uint8_t len);
+//void uart6_transmit_with_next(uint8_t* data, uint8_t len);
 
 // printf redirect finished.
-uint8_t str_len_(const char * x){int i;while(x[i++]);return i;}
+//uint8_t str_len_(const char * x){int i;while(x[i++]);return i;}
 
-static void IT_Init(void);          // 中断启动
-static void init_hard_ware(void);  // PWM生成启动
+// static void System_INIT();
+//static void IT_Init(void);
+//static void init_hard_ware(void);  // 硬件启动
 
 /* USER CODE END PFP */
 
@@ -161,264 +140,26 @@ int main(void)
   MX_ADC1_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
-  //MX_SDIO_SD_Init();
+ // MX_SDIO_SD_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
-  MX_TIM1_Init();   // PWM
-  MX_TIM2_Init();   // PWM
+  MX_TIM1_Init();
+  MX_TIM2_Init();
   MX_UART4_Init();
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
-  MX_TIM6_Init();       // 采样
-  MX_TIM7_Init();       // PPM计时器，
   /* USER CODE BEGIN 2 */
 
-
-
-    /* 1. 硬件资源初始化 */
-    init_hard_ware();               // 外设初始化
-    IT_Init();                      // 中断设置生效
-    init_uart_to_pc(&huart1);// 启动 PC端口的 uart
-
-
-
-    /* 2. 通信功能启动 */
-    // UART中断开启
-    HAL_UART_Receive_IT(&huart1,(uint8_t*)u1rx_buff,1); // 开 uart1 中断 (PC 通信)
-    HAL_UART_Receive_IT(&huart2,(uint8_t*)u2rx_buff,1); // 开 uart2 中断 (GPS)
-    HAL_UART_Receive_IT(&huart3,(uint8_t*)u3rx_buff,1); // 开 uart3 中断 (超声波)
-    LED1_OFF;    // 关闭 LED1
-    LED2_OFF;    // 关闭 LED2
-
-
-
-    /* 3. 估计器功能启动 */
-    // 传感器初始化
-    //MPU6050_init(&hi2c2);
-    IMU_init(&hi2c2);
-    MAG3110_init(&hi2c1);
-    MAG_init(&hi2c1);
-    // HMC5883_init(&hi2c1);
-    // BMP180_init(&hi2c1);
-
-    // GPS
-    PSR_init(&hi2c1);
-    gps_info main_gps_info;
-
-    // 传感器校正
-    calibrate_get_i2c_spi(&hi2c1, &hi2c2, nullptr, nullptr);
-    // 校准选项
-    // 1: 现场进行校准    0: 使用已有数据
-#if 0
-    calibrate_at_init(&huart1);       // 现场校准
-#else
-    calibrate_at_init();              // 使用经验数据
-#endif
-
-    // I2C设备扫描器 par1:I2C handle对象 par2:寄存器地址，一般是ID  par:期望寄存器数值，一般对应ID的KEY
-    // i2c_scan_print(&hi2c1, 0x00, 0x68);
-
-    int cnt_limit = 5;  //  采样次数达到这个数值之后通过串口回传一次状态数据
-    int cnt = 0;        //  上面那个采样次数的计数值
-
-    float rd = 180.0/3.1415926; // 1rad 代表的角度
-
-    float quat[4] = {0,0,0,0}; // 从估计器导出的姿态值
-    float pitch = 0;                          // pitch角
-    float roll = 0;                           // roll角
-    float yaw = 0;                            // yaw角
-
-
-
-    /* 4. 控制器功能启动 */
-
-    // 控制器声明
-    pid_API pid_controller;
-
-    // PID参数
-    float pid_parameter[18] = {0.1, 0, 1,
-                               0.1, 0, 1,
-                               0.1, 0, 1,
-                               0.1, 0, 1,
-                               0.1, 0, 1,
-                               0.1, 0, 1};
-
-    // 初始状态的姿态和位置目标
-    float init_target[6] = {0, 0, 0, 0, 0, 0};
-
-    // pid控制器初始化，导入pid参数和目标
-    pid_controller.init_PID_API(pid_parameter,
-                                pid_parameter+3,
-                                pid_parameter+6,
-                                pid_parameter+9,
-                                pid_parameter+12,
-                                pid_parameter+15,
-                                init_target);
-
-
-    // 这个给到每次的PID更新
-    float estimate_data[6]={0.0,0.0,0.0,0.0,0.0,0.0}; // 状态容器，测量的姿态和位置数据从这里导入到PID_API
-
-    // 这个是从更新里面取数据的变量
-    float Qua_pwm_rate[4] = {0,0,0,0};                        // 占空比(也就是油门),PID控制器给出
-    float Force_and_Moment[6] = {0,0,0,0,0,0};        // 力和力矩的控制输出，PID控制器给出
-
-    // 变量
-    int ss = send_sgn;
-    uint8_t data[12];   // IMU
-    float datap[6];     // IMU
-
-    uint8_t mag_data[6];    // MAG
-    uint8_t spl_data[10];   // SPL06
-    float mag_fdata[3];     // MAG
-    float mag_data_f[3] = {0,0,0};
-
-
-    // 这里等待遥控器连上飞控
-    while(PPM_data[0] == 5000 ||
-            PPM_data[1] == 5000 ||
-            PPM_data[2] == 5000 ||
-            PPM_data[3] == 5000 ||
-            PPM_data[4] == 5000 ||
-            PPM_data[5] == 5000 ||
-            PPM_data[6] == 5000 ||
-            PPM_data[7] == 5000 ||
-            PPM_data[8] == 5000 ||
-            PPM_data[9] == 5000);
-
-    // 遥控器完成连接之后，测量最大值
-//    uint16_t dy = 300; // 延时三秒
-//    while(dy){
-//        if(send_sgn != 0){
-//            dy = dy - 1;
-//            send_sgn = 0;
-//        }
-//    }
-//    REMOTE_CONTROL_get_zero_index(PPM_data, 11);
-
-    /* USER CODE END 2 */
+  /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-      // 每当send_sgn发出，说明需要一次更新
-      if(send_sgn != 0) {
-          ss = send_sgn;
 
-          send_sgn = 0;
-          cnt++;
-
-          /* 传感器读取 */
-
-//        imu6050_read(&hi2c2, data, 1);
-//        imu_process(data, datap);
-          IMU_read_data(data, datap);
-
-  //      float mag_fdata_[3];
- //       uint8_t mag_data_[6];
-//        MAG3110_read(&hi2c1, mag_data_);
-//        MAG3110_process3(mag_data_, mag_fdata_);
-          MAG_read_data(mag_data, mag_fdata);
-
-//        HMC5883_read_and_process(mag_data_f);
-//        uint8_t hmc_data[6];
-//        HMC5883_read(hmc_data);
-
-          //float bmp_data;
-          //BMP180_get_pressure(&bmp_data);
-
-          // 超声波
-          sonic_requist_distance(&huart3);
-
-          // 电压测量 ADC 测量信号
-          // hadc1.Instance->CR2 |= 0x4000;
-
-          // 传感器校准
-          calibrate_return_data(datap, datap+3, mag_fdata,0,0,0,0);
-
-          /* 状态估计 */
-          MahonyAHRSupdate(datap[3],datap[4],datap[5],
-                           datap[0],datap[1],datap[2],
-                           -mag_fdata[0],-mag_fdata[1],mag_fdata[2]);
-
-          quat[0] = q0x; quat[1] = q1x; quat[2] = q2x; quat[3] = q3x;
-          pitch = asin(2*(q0x*q2x-q1x*q3x));
-          roll = atan(2*(q0x*q1x+q2x*q3x)/(1-2*(q1x*q1x+q2x*q2x)));
-          // float yaw = atan(2*(q0x*q3x+q1x*q2x)/(1-2*(q2x*q2x+q3x*q3x)))*rd;
-          yaw = atan2(2*(q0x*q3x+q1x*q2x),(1-2*(q2x*q2x+q3x*q3x)));
-
-          /* 控制器更新 */
-          // 填入estimate数值
-          estimate_data[PID_API_INDEX_PITCH] = pitch;
-          estimate_data[PID_API_INDEX_ROLL] = roll;
-          estimate_data[PID_API_INDEX_YAW] = yaw;
-          pid_controller.INPUT_estimate(estimate_data);
-
-          // 姿态控制器
-          pid_controller.PROCESS_update();
-          pid_controller.get_OUTPUT(Qua_pwm_rate, Force_and_Moment);
-
-          /* 输出 */
-          // 控制需求给到 pwm生成器，修改占空比
-          pwm_change(Qua_pwm_rate, &htim1, &htim2);
-
-          /* 串口通信 */
-          if(cnt >= cnt_limit)
-          {
-              cnt = 0;
-              LED1_TOGGLE;
-
-              char msg[150] = {0};
-
-#if 0
-              sprintf(msg, "pitch=%f,roll=%f,yaw=%f,bt=%lu",pitch*rd, roll*rd, yaw*rd, battery_raw_value);
-#elif 1
-              sprintf(msg, "PPM,CH1=%lu,CH2=%lu,CH3=%lu,CH4=%lu,CH5=%lu,CH6=%lu,CH7=%lu,CH8=%lu,CH9=%lu,CH10=%lu,SUM=%lu,",
-                                                                  PPM_data[1],
-                                                                  PPM_data[2],
-                                                                  PPM_data[3],
-                                                                  PPM_data[4],
-                                                                  PPM_data[5],
-                                                                  PPM_data[6],
-                                                                  PPM_data[7],
-                                                                  PPM_data[8],
-                                                                  PPM_data[9],
-                                                                  PPM_data[10],
-              PPM_data[1]+PPM_data[2]+PPM_data[3]+PPM_data[4]+PPM_data[5]+PPM_data[6]+PPM_data[7]+PPM_data[8]+PPM_data[9]);
-#elif 0
-              sprintf(msg, "ax=%.2f,ay=%.2f,az=%.2f,gx=%.2f,gy=%.2f,gz=%.2f,mx=%.2f,my=%.2f,mz=%.2f\n",
-                                                                                                    datap[0],
-                                                                                                    datap[1],
-                                                                                                    datap[2],
-                                                                                                    datap[3],
-                                                                                                    datap[4],
-                                                                                                    datap[5],
-                                                                                                    mag_fdata[0],
-                                                                                                    mag_fdata[2],
-                                                                                                    mag_fdata[1]);
-#elif 0
-              sprintf(msg, "mx=%.2f,my=%.2f,mz=%.2f\n",mag_fdata[0],
-                      mag_fdata[2],
-                      mag_fdata[1]);
-
-#elif 0
-                sprintf(msg, "Q1=%.4f, Q2=%.4f, Q3=%.4f, Q4=%.4f, pitch=%.4f, roll=%.4f, yaw=%.4f\n",
-                                                                                    Qua_pwm_rate[0],
-                                                                                    Qua_pwm_rate[1],
-                                                                                    Qua_pwm_rate[2],
-                                                                                    Qua_pwm_rate[3],
-                                                                                    pitch*rd,
-                                                                                    roll*rd,
-                                                                                    yaw*rd);
-#endif
-              uart1_transmit_with_next((uint8_t *) msg, str_len_(msg));
-
-          }
-      }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -479,8 +220,7 @@ static void MX_ADC1_Init(void)
 {
 
   /* USER CODE BEGIN ADC1_Init 0 */
-  __ADC1_CLK_ENABLE();
-  __ADC2_CLK_ENABLE();
+
   /* USER CODE END ADC1_Init 0 */
 
   ADC_ChannelConfTypeDef sConfig = {0};
@@ -495,7 +235,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV2;
   hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = DISABLE;
-  hadc1.Init.ContinuousConvMode=ENABLE;
+  hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
@@ -517,10 +257,7 @@ static void MX_ADC1_Init(void)
   {
     Error_Handler();
   }
-
   /* USER CODE BEGIN ADC1_Init 2 */
-
-    HAL_ADC_Start_IT(&hadc1);
 
   /* USER CODE END ADC1_Init 2 */
 
@@ -535,28 +272,14 @@ static void MX_I2C1_Init(void)
 {
 
   /* USER CODE BEGIN I2C1_Init 0 */
-    GPIO_InitTypeDef gi;
 
-    __HAL_RCC_GPIOB_CLK_ENABLE();
-    __HAL_RCC_I2C1_CLK_ENABLE();
-
-    gi.Pin = GPIO_PIN_6;
-    gi.Mode = GPIO_MODE_AF_OD;
-    gi.Pull = GPIO_NOPULL;
-    gi.Speed = GPIO_SPEED_HIGH;
-    gi.Alternate = GPIO_AF4_I2C1;
-    HAL_GPIO_Init(GPIOB, &gi);
-
-    gi.Pin = GPIO_PIN_7;
-    HAL_GPIO_Init(GPIOB, &gi);
   /* USER CODE END I2C1_Init 0 */
 
   /* USER CODE BEGIN I2C1_Init 1 */
-    __HAL_RCC_I2C1_FORCE_RESET();
-            __I2C1_RELEASE_RESET();
+
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.ClockSpeed = 400000;
+  hi2c1.Init.ClockSpeed = 100000;
   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
@@ -583,28 +306,14 @@ static void MX_I2C2_Init(void)
 {
 
   /* USER CODE BEGIN I2C2_Init 0 */
-    GPIO_InitTypeDef gi;
 
-    __HAL_RCC_GPIOB_CLK_ENABLE();
-    __HAL_RCC_I2C2_CLK_ENABLE();
-
-    gi.Pin = GPIO_PIN_11;
-    gi.Mode = GPIO_MODE_AF_OD;
-    gi.Pull = GPIO_NOPULL;
-    gi.Speed = GPIO_SPEED_HIGH;
-    gi.Alternate = GPIO_AF4_I2C2;
-    HAL_GPIO_Init(GPIOB, &gi);
-
-    gi.Pin = GPIO_PIN_10;
-    HAL_GPIO_Init(GPIOB, &gi);
   /* USER CODE END I2C2_Init 0 */
 
   /* USER CODE BEGIN I2C2_Init 1 */
-    __HAL_RCC_I2C2_FORCE_RESET();
-            __I2C2_RELEASE_RESET();
+
   /* USER CODE END I2C2_Init 1 */
   hi2c2.Instance = I2C2;
-  hi2c2.Init.ClockSpeed = 400000;
+  hi2c2.Init.ClockSpeed = 100000;
   hi2c2.Init.DutyCycle = I2C_DUTYCYCLE_2;
   hi2c2.Init.OwnAddress1 = 0;
   hi2c2.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
@@ -737,6 +446,7 @@ static void MX_SPI2_Init(void)
   */
 static void MX_TIM1_Init(void)
 {
+
   /* USER CODE BEGIN TIM1_Init 0 */
 
   /* USER CODE END TIM1_Init 0 */
@@ -750,9 +460,9 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 16-1; // 分频到1M
+  htim1.Init.Prescaler = 0;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = PWM_Period-1;  // 50HZ为20ms，即一个周期为20000
+  htim1.Init.Period = 65535;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -780,7 +490,7 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 10000;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
@@ -806,7 +516,7 @@ static void MX_TIM1_Init(void)
   sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
   sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
   sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
-  sBreakDeadTimeConfig.DeadTime = 10;
+  sBreakDeadTimeConfig.DeadTime = 0;
   sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
   sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
   sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
@@ -830,7 +540,7 @@ static void MX_TIM2_Init(void)
 {
 
   /* USER CODE BEGIN TIM2_Init 0 */
-            __TIM2_CLK_ENABLE();
+
   /* USER CODE END TIM2_Init 0 */
 
   TIM_ClockConfigTypeDef sClockSourceConfig = {0};
@@ -841,9 +551,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 16-1;
+  htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = PWM_Period-1;
+  htim2.Init.Period = 4294967295;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -866,7 +576,7 @@ static void MX_TIM2_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 10000;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -886,92 +596,9 @@ static void MX_TIM2_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM2_Init 2 */
-    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_ALL);
-
-//            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_1, 5000);
-//            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 5000);
-//            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, 5000);
-//            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 5000);
 
   /* USER CODE END TIM2_Init 2 */
   HAL_TIM_MspPostInit(&htim2);
-
-}
-
-/**
-  * @brief TIM6 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM6_Init(void)
-{
-
-  /* USER CODE BEGIN TIM6_Init 0 */
-
-  /* USER CODE END TIM6_Init 0 */
-
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
-
-  /* USER CODE BEGIN TIM6_Init 1 */
-
-  /* USER CODE END TIM6_Init 1 */
-  htim6.Instance = TIM6;
-  htim6.Init.Prescaler = 1599;
-  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 100;      // 10000 = 1s   100 = 10ms
-  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM6_Init 2 */
-
-  /* USER CODE END TIM6_Init 2 */
-
-}
-
-/**
-  * @brief TIM7 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM7_Init(void)
-{
-
-  /* USER CODE BEGIN TIM7_Init 0 */
-
-  /* USER CODE END TIM7_Init 0 */
-
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
-
-  /* USER CODE BEGIN TIM7_Init 1 */
-
-  /* USER CODE END TIM7_Init 1 */
-  htim7.Instance = TIM7;
-  htim7.Init.Prescaler = 16;     // 1000khz -- 1us
-  htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim7.Init.Period = 5000;      // 3000us3ms  50hz的输入为3ms  多1ms是为了方便直接接收下一帧
-  htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim7) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim7, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM7_Init 2 */
-    HAL_TIM_Base_Stop(&htim7);      // 当接受信号中断之后，tim7才开始计时
-    __HAL_TIM_SET_COUNTER(&htim7, 0);
-  /* USER CODE END TIM7_Init 2 */
 
 }
 
@@ -1017,8 +644,7 @@ static void MX_USART1_UART_Init(void)
 {
 
   /* USER CODE BEGIN USART1_Init 0 */
-    __HAL_RCC_GPIOA_CLK_ENABLE();
-    __HAL_RCC_USART1_CLK_ENABLE();
+
   /* USER CODE END USART1_Init 0 */
 
   /* USER CODE BEGIN USART1_Init 1 */
@@ -1051,8 +677,7 @@ static void MX_USART2_UART_Init(void)
 {
 
   /* USER CODE BEGIN USART2_Init 0 */
-    __HAL_RCC_USART2_CLK_ENABLE();
-    __HAL_RCC_GPIOD_CLK_ENABLE();
+
   /* USER CODE END USART2_Init 0 */
 
   /* USER CODE BEGIN USART2_Init 1 */
@@ -1085,8 +710,7 @@ static void MX_USART3_UART_Init(void)
 {
 
   /* USER CODE BEGIN USART3_Init 0 */
-    __HAL_RCC_USART3_CLK_ENABLE();
-    __HAL_RCC_GPIOD_CLK_ENABLE();
+
   /* USER CODE END USART3_Init 0 */
 
   /* USER CODE BEGIN USART3_Init 1 */
@@ -1153,12 +777,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOE_CLK_ENABLE();
+  __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, LED1_Pin|LED2_Pin, GPIO_PIN_RESET);
@@ -1189,217 +813,9 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-
-    // PPM
-    GPIO_InitStruct.Pin = PPM_RX_PIN;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-    GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-    HAL_GPIO_Init(PPM_RX_PORT, &GPIO_InitStruct);
-
-    // ADC
-    GPIO_InitStruct.Pin = ADC_BATTERY_PIN;
-    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    HAL_GPIO_Init(ADC_BATTERY_PORT, &GPIO_InitStruct);
-
-    // PWM
-  // tim2_ch 3,4,1
-  GPIO_InitStruct.Pin = GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_15;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  // tim2_ch 2
-  GPIO_InitStruct.Pin = GPIO_PIN_3;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-  // tim2_ch 1,2,3,4
-  GPIO_InitStruct.Pin = GPIO_PIN_9 | GPIO_PIN_11 | GPIO_PIN_13 | GPIO_PIN_14;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF1_TIM1;
-  HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 }
 
 /* USER CODE BEGIN 4 */
-
-static void IT_Init(void)
-{
-    uart_pc = &huart1;
-    htim1_it = &htim1;
-    uart_gps = &huart2;
-
-    __HAL_RCC_TIM1_CLK_ENABLE();
-    __HAL_RCC_TIM2_CLK_ENABLE();
-    __HAL_RCC_TIM6_CLK_ENABLE();
-    __HAL_RCC_TIM7_CLK_ENABLE();
-
-    NVIC_SetPriorityGrouping(2);
-
-
-    // 采样中断
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 2);
-    HAL_NVIC_ClearPendingIRQ(TIM6_DAC_IRQn);
-    __HAL_TIM_ENABLE_IT(&htim6, TIM6_DAC_IRQn);
-    HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
-    HAL_TIM_Base_Start_IT(&htim6);
-
-    // PPM-PIN中断
-    HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
-    //HAL_NVIC_ClearPendingIRQ(EXTI15_10_IRQn);
-    NVIC_EnableIRQ(EXTI15_10_IRQn);
-
-    // ADC中断
-    HAL_NVIC_SetPriority(ADC_IRQn, 1, 0);
-    HAL_NVIC_EnableIRQ(ADC_IRQn);
-
-
-//    // PPM接收时钟中断 -- 思路错了，应该是设置pin的 EXIT
-//    HAL_NVIC_SetPriority(TIM7_IRQn, 1, 0);
-//    HAL_NVIC_ClearPendingIRQ(TIM7_IRQn);
-//    __HAL_TIM_ENABLE_IT(&htim7, TIM7_IRQn);
-//    HAL_NVIC_EnableIRQ(TIM7_IRQn);
-//    HAL_TIM_Base_Start_IT(&htim7);
-
-//    // PWM A C 通道中断
-//    HAL_NVIC_SetPriority(TIM1_UP_TIM10_IRQn, 0, 1);
-//    HAL_NVIC_ClearPendingIRQ(TIM1_UP_TIM10_IRQn);
-//    __HAL_TIM_ENABLE_IT(&htim1, TIM1_UP_TIM10_IRQn);
-//    HAL_NVIC_EnableIRQ(TIM1_UP_TIM10_IRQn);
-//    HAL_TIM_Base_Start_IT(&htim1);
-//
-//    // uart中断，不需要设置，中断也可以使用
-//    HAL_NVIC_SetPriority(USART1_IRQn, 1, 1);
-//    HAL_NVIC_ClearPendingIRQ(USART1_IRQn);
-//    HAL_NVIC_EnableIRQ(USART1_IRQn);
-//    __HAL_UART_ENABLE_IT(&huart1, USART1_IRQn);
-//    __HAL_UART_ENABLE_IT(&huart1, UART_IT_ERR);
-//    __HAL_UART_ENABLE_IT(&huart1, UART_IT_RXNE);
-//    HAL_UART_Receive_IT(&huart1,(uint8_t*)u1rx_buff,1);
-//
-//    HAL_NVIC_SetPriority(USART2_IRQn, 1, 2);
-//    HAL_NVIC_ClearPendingIRQ(USART2_IRQn);
-//    HAL_NVIC_EnableIRQ(USART2_IRQn);
-//    __HAL_UART_ENABLE_IT(&huart2, USART2_IRQn);
-//    __HAL_UART_ENABLE_IT(&huart2, UART_IT_ERR);
-//    __HAL_UART_ENABLE_IT(&huart2, UART_IT_RXNE);
-//    HAL_UART_Receive_IT(&huart2,(uint8_t*)u2rx_buff,1);
-//
-
-}
-
-static void init_hard_ware(void)  // 硬件启动
-{
-
-    // 电机启动
-    pwm_change(0, 0, 0, 0); // 由于PWM有最低转速要求，实际0会被置为最低转速
-    pwm_generate_ON();
-}
-
-void uart1_transmit(uint8_t* data, uint8_t len)
-{
-    for(int i = 0; i < len; i++)
-    {
-        data[i] = 0x80 | data[i];
-    }
-
-    HAL_UART_Transmit(&huart1, (uint8_t*)data, len, 500);
-}
-void uart1_transmit_with_next(uint8_t* data, uint8_t len)
-{
-    for(int i = 0; i < len-1; i++)
-    {
-        data[i] = 0x80 | data[i];
-    }
-    data[len] = 0xff;
-    HAL_UART_Transmit(&huart1, (uint8_t*)data, len, 500);
-}
-void print(const char* data, uint8_t len){ uart1_transmit((uint8_t*)data, len);}
-void uart2_transmit(uint8_t* data, uint8_t len)
-{
-    for(int i = 0; i < len; i++)
-    {
-        data[i] = 0x80 | data[i];
-    }
-
-    HAL_UART_Transmit(&huart2, (uint8_t*)data, len, 500);
-}
-void uart2_transmit_with_next(uint8_t* data, uint8_t len)
-{
-    for(int i = 0; i < len-1; i++)
-    {
-        data[i] = 0x80 | data[i];
-    }
-
-    HAL_UART_Transmit(&huart2, (uint8_t*)data, len, 500);
-}
-void uart6_transmit(uint8_t* data, uint8_t len)
-{
-    for(int i = 0; i < len; i++)
-    {
-        data[i] = 0x80 | data[i];
-    }
-
-    HAL_UART_Transmit(&huart6, (uint8_t*)data, len, 500);
-}
-void uart6_transmit_with_next(uint8_t* data, uint8_t len)
-{
-    for(int i = 0; i < len-1; i++)
-    {
-        data[i] = 0x80 | data[i];
-    }
-
-    HAL_UART_Transmit(&huart6, (uint8_t*)data, len, 500);
-}
-
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-    if(huart->Instance == USART2) {
-        //HAL_UART_Transmit(&huart1,(uint8_t*)u2rx_buff,1,100);
-        // uart1_transmit((uint8_t*)u2rx_buff, 1);
-
-        LED2_TOGGLE
-    }
-    else if(huart -> Instance == USART1){
-        uart1_transmit((uint8_t*)u2rx_buff, 1);
-    }
-    else if(huart -> Instance == USART3){
-        sonic_data_length = sonic_data_length + 1;  // 长度为2时输出数据
-
-        // 第一字节数据
-        if(sonic_data_length == 1)
-        {
-            sonic_data16 = 0;
-            sonic_data16 = u3rx_buff[0];
-        }
-            // 第二字节数据
-        else if(sonic_data_length == 2)
-        {
-            sonic_data_length = 0;
-            sonic_data16 = (sonic_data16 << 8) + u3rx_buff[0];
-        }
-            // 不知道啥玩意，从第一字节接受数据
-        else
-        {
-            sonic_data_length = 0;
-        }
-
-//        uint16_t distance = u3rx_buff[0];
-//        distance = (distance << 8) + u3rx_buff[1];
-//        distance_ultra_sonic = (float)distance;
-    }
-    else if(huart->Instance == USART6){
-
-    }
-    //重新设置中断
-    HAL_UART_Receive_IT(&huart1,(uint8_t*)u1rx_buff,1);     // PC
-    HAL_UART_Receive_IT(&huart2,(uint8_t*)u2rx_buff,1);     // GPS
-    HAL_UART_Receive_IT(&huart3,(uint8_t*)u3rx_buff,1);     // 超声波
-}
 
 /* USER CODE END 4 */
 
@@ -1407,13 +823,15 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   * @brief  This function is executed in case of error occurrence.
   * @retval None
   */
-void Error_Handler(void) {
-    /* USER CODE BEGIN Error_Handler_Debug */
-    /* User can add his own implementation to report the HAL error return state */
-    __disable_irq();
-    while (1) {
-    }
-    /* USER CODE END Error_Handler_Debug */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
 }
 
 #ifdef  USE_FULL_ASSERT
