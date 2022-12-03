@@ -26,10 +26,22 @@ void remote_control_phase(uint32_t* ppm_data, float* ppm_phased){
     ppm_phased[3] = (float)ppm_data[temp];         // CH4
 
     // 解析百分比数据
-    ppm_phased[PPM_CH_FORCE] =(ppm_phased[PPM_CH_FORCE] - force_zero)/REMOTE_CONTROL_RADIUS_PPM_usf;
+    ppm_phased[PPM_CH_FORCE] =(ppm_phased[PPM_CH_FORCE] - force_zero);
+//    if(ppm_phased[PPM_CH_FORCE] > REMOTE_CONTROL_DEATH_PPM_usf ||
+//       ppm_phased[PPM_CH_FORCE] < -REMOTE_CONTROL_DEATH_PPM_usf){
+//        ppm_phased[PPM_CH_FORCE] = 0;
+//    }
+    ppm_phased[PPM_CH_FORCE] = ppm_phased[PPM_CH_FORCE]/REMOTE_CONTROL_RADIUS_PPM_usf;
 
     ppm_phased[PPM_CH_PITCH] = (ppm_phased[PPM_CH_PITCH] - REMOTE_CONTROL_MID_PPM_usf)/REMOTE_CONTROL_RADIUS_PPM_usf;
-    ppm_phased[PPM_CH_YAW]   = (ppm_phased[PPM_CH_YAW]   - REMOTE_CONTROL_MID_PPM_usf)/REMOTE_CONTROL_RADIUS_PPM_usf;
+
+    ppm_phased[PPM_CH_YAW]   = (ppm_phased[PPM_CH_YAW]   - REMOTE_CONTROL_MID_PPM_usf);
+//    if(ppm_phased[PPM_CH_YAW] > REMOTE_CONTROL_DEATH_PPM_usf ||
+//       ppm_phased[PPM_CH_YAW] < -REMOTE_CONTROL_DEATH_PPM_usf){
+//        ppm_phased[PPM_CH_YAW] = 0;
+//    }
+    ppm_phased[PPM_CH_YAW] = ppm_phased[PPM_CH_YAW]/REMOTE_CONTROL_RADIUS_PPM_usf;
+
     ppm_phased[PPM_CH_ROLL]  = (ppm_phased[PPM_CH_ROLL]  - REMOTE_CONTROL_MID_PPM_usf)/REMOTE_CONTROL_RADIUS_PPM_usf;
 }
 
