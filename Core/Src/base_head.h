@@ -58,7 +58,7 @@ typedef struct{
 // PWM
 #define PWM_FREQ                50                // PWM输出频率(Hz)
 #define PWM_RESOLVE             1000              // PWM分辨率
-#define PWM_Period              20000             // 周期
+#define PWM_Period              10000             // 周期
 
 // PPM
 // #define PPM_nUS                 10      // PPM采样时间(us)

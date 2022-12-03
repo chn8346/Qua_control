@@ -328,6 +328,7 @@ void TIM1_UP_TIM10_IRQHandler(void)
 {
 //    send_sgn = 0x0f;
     HAL_TIM_IRQHandler(htim1_it);
+    LED2_TOGGLE
 //    HAL_NVIC_ClearPendingIRQ(TIM1_UP_TIM10_IRQn);
 }
 

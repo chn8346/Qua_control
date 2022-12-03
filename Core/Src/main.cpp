@@ -825,7 +825,7 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 10000;
+  sConfigOC.Pulse = 1000;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
@@ -835,7 +835,7 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  sConfigOC.OCMode = TIM_OCMODE_TIMING;
+  // sConfigOC.OCMode = TIM_OCMODE_TIMING;
   if (HAL_TIM_OC_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
@@ -860,6 +860,11 @@ static void MX_TIM1_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN TIM1_Init 2 */
+
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
 
   /* USER CODE END TIM1_Init 2 */
   HAL_TIM_MspPostInit(&htim1);
@@ -911,7 +916,7 @@ static void MX_TIM2_Init(void)
     Error_Handler();
   }
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 10000;
+  sConfigOC.Pulse = 1000;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -937,6 +942,11 @@ static void MX_TIM2_Init(void)
 //            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_2, 5000);
 //            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_3, 5000);
 //            __HAL_TIM_SetCompare(&htim2, TIM_CHANNEL_4, 5000);
+
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
 
   /* USER CODE END TIM2_Init 2 */
   HAL_TIM_MspPostInit(&htim2);
@@ -1251,7 +1261,7 @@ static void MX_GPIO_Init(void)
     // PWM
   // tim2_ch 3,4,1
   GPIO_InitStruct.Pin = GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_15;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
   GPIO_InitStruct.Alternate = GPIO_AF1_TIM2;
@@ -1263,7 +1273,7 @@ static void MX_GPIO_Init(void)
 
   // tim2_ch 1,2,3,4
   GPIO_InitStruct.Pin = GPIO_PIN_9 | GPIO_PIN_11 | GPIO_PIN_13 | GPIO_PIN_14;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_HIGH;
   GPIO_InitStruct.Alternate = GPIO_AF1_TIM1;
@@ -1310,12 +1320,12 @@ static void IT_Init(void)
 //    HAL_NVIC_EnableIRQ(TIM7_IRQn);
 //    HAL_TIM_Base_Start_IT(&htim7);
 
-//    // PWM A C 通道中断
-//    HAL_NVIC_SetPriority(TIM1_UP_TIM10_IRQn, 0, 1);
-//    HAL_NVIC_ClearPendingIRQ(TIM1_UP_TIM10_IRQn);
-//    __HAL_TIM_ENABLE_IT(&htim1, TIM1_UP_TIM10_IRQn);
-//    HAL_NVIC_EnableIRQ(TIM1_UP_TIM10_IRQn);
-//    HAL_TIM_Base_Start_IT(&htim1);
+    // PWM A C 通道中断
+    HAL_NVIC_SetPriority(TIM1_UP_TIM10_IRQn, 0, 1);
+    HAL_NVIC_ClearPendingIRQ(TIM1_UP_TIM10_IRQn);
+    __HAL_TIM_ENABLE_IT(&htim1, TIM1_UP_TIM10_IRQn);
+    HAL_NVIC_EnableIRQ(TIM1_UP_TIM10_IRQn);
+    HAL_TIM_Base_Start_IT(&htim1);
 //
 //    // uart中断，不需要设置，中断也可以使用
 //    HAL_NVIC_SetPriority(USART1_IRQn, 1, 1);
@@ -1407,7 +1417,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         //HAL_UART_Transmit(&huart1,(uint8_t*)u2rx_buff,1,100);
         // uart1_transmit((uint8_t*)u2rx_buff, 1);
 
-        LED2_TOGGLE
+        // LED2_TOGGLE
     }
     else if(huart -> Instance == USART1){
         uart1_transmit((uint8_t*)u2rx_buff, 1);
