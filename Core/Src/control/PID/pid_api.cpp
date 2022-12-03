@@ -106,7 +106,7 @@ void pid_API::get_OUTPUT(float Qua_out[4] ,float force_moment_out[6]) {
     this->yaw_pid.pid_get(force_moment_out+PID_API_INDEX_YAW);
 
     // 对力进行限幅，小于0.1等同于0.1
-    if(force_moment_out[PID_API_INDEX_POSZ] < 0.1)force_moment_out[PID_API_INDEX_POSZ] = 0.1;
+    // if(force_moment_out[PID_API_INDEX_POSZ] < 0.1)force_moment_out[PID_API_INDEX_POSZ] = 0.1;
 
     float* u;
     u = force_moment_out;
@@ -202,7 +202,7 @@ void pid_API::traject_gen_control() {
 }
 
 
-#define PID_API_remote_gen_target_POSZ_LIMIT  1.0
+#define PID_API_remote_gen_target_POSZ_LIMIT  100.0
 #define PID_API_remote_gen_target_YAW_LIMIT   0.002
 
 void PID_API_remote_control_gen_target(float* ppm_phased, float * target){
