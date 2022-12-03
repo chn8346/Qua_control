@@ -47,8 +47,6 @@ void pid_API::init_PID_API(float* pos_x_pid_parameter,
 }
 
 void pid_API::INPUT_target(float pos_angle_target[6]) {
-    // TODO 【后续需要补充】 角度限幅
-
 
     // 类内临时数值 赋值
     this->target_pos_angle[PID_API_INDEX_POSX] = pos_angle_target[PID_API_INDEX_POSX];
@@ -57,6 +55,17 @@ void pid_API::INPUT_target(float pos_angle_target[6]) {
     this->target_pos_angle[PID_API_INDEX_PITCH] = pos_angle_target[PID_API_INDEX_PITCH];
     this->target_pos_angle[PID_API_INDEX_ROLL] = pos_angle_target[PID_API_INDEX_ROLL];
     this->target_pos_angle[PID_API_INDEX_YAW] = pos_angle_target[PID_API_INDEX_YAW];
+
+    // TODO 【后续需要补充】 角度限幅
+
+    // 偏航角(yaw)可能超出[-pi,+pi]的范围，需要进行计算
+    if(this->target_pos_angle[PID_API_INDEX_YAW] >  Pi){
+        this->target_pos_angle[PID_API_INDEX_YAW] = this->target_pos_angle[PID_API_INDEX_YAW] - (float)Pi - (float)Pi;
+    }
+
+    if(this->target_pos_angle[PID_API_INDEX_YAW] <  -Pi){
+        this->target_pos_angle[PID_API_INDEX_YAW] = this->target_pos_angle[PID_API_INDEX_YAW] + (float)Pi + (float)Pi;
+    }
 
     // 目标导入
     this->z_pid.target_give(this->target_pos_angle[PID_API_INDEX_POSZ]);
@@ -95,6 +104,10 @@ void pid_API::get_OUTPUT(float Qua_out[4] ,float force_moment_out[6]) {
     this->pitch_pid.pid_get(force_moment_out+PID_API_INDEX_PITCH);
     this->roll_pid.pid_get(force_moment_out+PID_API_INDEX_ROLL);
     this->yaw_pid.pid_get(force_moment_out+PID_API_INDEX_YAW);
+
+    // 对力进行限幅，小于0.1等同于0.1
+    if(force_moment_out[PID_API_INDEX_POSZ] < 0.1)force_moment_out[PID_API_INDEX_POSZ] = 0.1;
+
     float* u;
     u = force_moment_out;
 
@@ -190,7 +203,7 @@ void pid_API::traject_gen_control() {
 
 
 #define PID_API_remote_gen_target_POSZ_LIMIT  1.0
-#define PID_API_remote_gen_target_YAW_LIMIT   0.01
+#define PID_API_remote_gen_target_YAW_LIMIT   0.002
 
 void PID_API_remote_control_gen_target(float* ppm_phased, float * target){
     // 高度 -- 高于起飞油门时刻，target是正的，否则是负的
@@ -205,6 +218,8 @@ void PID_API_remote_control_gen_target(float* ppm_phased, float * target){
     // yaw -- yaw是积分形式
     target[PID_API_INDEX_YAW] =
             target[PID_API_INDEX_YAW] + ppm_phased[PPM_CH_YAW]*(float)PID_API_remote_gen_target_YAW_LIMIT;
+
+    // if(target[PID_API_INDEX_YAW] > 3.1415926)target[PID_API_INDEX_YAW] = target[PID_API_INDEX_YAW] - 3.1415926;
 
 }
 

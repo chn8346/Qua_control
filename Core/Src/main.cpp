@@ -387,11 +387,21 @@ int main(void)
               LED1_TOGGLE;
 
               char msg[150] = {0};
-#if 1
+#if 0       // 姿态测试
               sprintf(msg, "pitch=%f,roll=%f,yaw=%f,bt=%lu",pitch*rd, roll*rd, yaw*rd, battery_raw_value);
-#elif 0
-              sprintf(msg, "pitch=%f,roll=%f,yaw=%f,bt=%lu",pitch*rd, roll*rd, yaw*rd, battery_raw_value);
-#elif 1
+#elif 0     // 遥控器行程测试
+              sprintf(msg, "force=%.2f,pitch=%.2f,roll=%.2f,yaw=%.2f",
+                                            PPM_precent_float[PPM_CH_FORCE],
+                                            PPM_precent_float[PPM_CH_PITCH],
+                                            PPM_precent_float[PPM_CH_ROLL],
+                                            PPM_precent_float[PPM_CH_YAW]);
+#elif 1     // 遥控器生成的目标测试
+              sprintf(msg, "target_z=%.2f,target_pitch=%.2f,target_roll=%.2f,target_yaw=%.2f",
+                                                              target_data[PID_API_INDEX_POSZ],
+                                                              target_data[PID_API_INDEX_PITCH],
+                                                              target_data[PID_API_INDEX_ROLL],
+                                                              target_data[PID_API_INDEX_YAW]);
+#elif 0     // 遥控器通道测试
               sprintf(msg, "PPM,CH1=%lu,CH2=%lu,CH3=%lu,CH4=%lu,CH5=%lu,CH6=%lu,CH7=%lu,CH8=%lu,CH9=%lu,CH10=%lu,SUM=%lu,",
                                                                   PPM_data[1],
                                                                   PPM_data[2],
@@ -404,7 +414,7 @@ int main(void)
                                                                   PPM_data[9],
                                                                   PPM_data[10],
               PPM_data[1]+PPM_data[2]+PPM_data[3]+PPM_data[4]+PPM_data[5]+PPM_data[6]+PPM_data[7]+PPM_data[8]+PPM_data[9]);
-#elif 0
+#elif 0     // 传感器测试
               sprintf(msg, "ax=%.2f,ay=%.2f,az=%.2f,gx=%.2f,gy=%.2f,gz=%.2f,mx=%.2f,my=%.2f,mz=%.2f\n",
                                                                                                     datap[0],
                                                                                                     datap[1],
@@ -415,12 +425,12 @@ int main(void)
                                                                                                     mag_fdata[0],
                                                                                                     mag_fdata[2],
                                                                                                     mag_fdata[1]);
-#elif 0
+#elif 0     // 磁力计单独测试
               sprintf(msg, "mx=%.2f,my=%.2f,mz=%.2f\n",mag_fdata[0],
                       mag_fdata[2],
                       mag_fdata[1]);
 
-#elif 0
+#elif 0     // 四元数和角度的姿态估计测试
                 sprintf(msg, "Q1=%.4f, Q2=%.4f, Q3=%.4f, Q4=%.4f, pitch=%.4f, roll=%.4f, yaw=%.4f\n",
                                                                                     Qua_pwm_rate[0],
                                                                                     Qua_pwm_rate[1],
