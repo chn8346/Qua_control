@@ -402,11 +402,15 @@ int main(void)
                                                               target_data[PID_API_INDEX_ROLL]*rd,
                                                               target_data[PID_API_INDEX_YAW]*rd);
 #elif 1     // 油门显示
-              sprintf(msg, "Q1=%.5f,Q2=%.5f,Q3=%.5f,Q4=%.5f,",
+              sprintf(msg, "Q1=%.5f,Q2=%.5f,Q3=%.5f,Q4=%.5f,target_z=%.2f,target_pitch=%.2f,target_roll=%.2f,target_yaw=%.2f",
                                                   Qua_pwm_rate[0],
                                                   Qua_pwm_rate[1],
                                                   Qua_pwm_rate[2],
-                                                  Qua_pwm_rate[3]);
+                                                  Qua_pwm_rate[3],
+                                                  target_data[PID_API_INDEX_POSZ],
+                                                  target_data[PID_API_INDEX_PITCH]*rd,
+                                                  target_data[PID_API_INDEX_ROLL]*rd,
+                                                  target_data[PID_API_INDEX_YAW]*rd);
 #elif 0     // 遥控器通道测试
               sprintf(msg, "PPM,CH1=%lu,CH2=%lu,CH3=%lu,CH4=%lu,CH5=%lu,CH6=%lu,CH7=%lu,CH8=%lu,CH9=%lu,CH10=%lu,SUM=%lu,",
                                                                   PPM_data[1],
