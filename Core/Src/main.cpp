@@ -403,10 +403,10 @@ int main(void)
                                                               target_data[PID_API_INDEX_YAW]*rd);
 #elif 1     // 油门显示
               sprintf(msg, "Q1=%.5f,Q2=%.5f,Q3=%.5f,Q4=%.5f,target_z=%.2f,target_pitch=%.2f,target_roll=%.2f,target_yaw=%.2f",
-                                                  Qua_pwm_rate[0]*Qua_pwm_rate[0],
-                                                  Qua_pwm_rate[1]*Qua_pwm_rate[1],
-                                                  Qua_pwm_rate[2]*Qua_pwm_rate[2],
-                                                  Qua_pwm_rate[3]*Qua_pwm_rate[3],
+                                                  Qua_pwm_rate[0]*Qua_pwm_rate[0]*((float)PWM_Period),
+                                                  Qua_pwm_rate[1]*Qua_pwm_rate[1]*((float)PWM_Period),
+                                                  Qua_pwm_rate[2]*Qua_pwm_rate[2]*((float)PWM_Period),
+                                                  Qua_pwm_rate[3]*Qua_pwm_rate[3]*((float)PWM_Period),
                                                   target_data[PID_API_INDEX_POSZ],
                                                   target_data[PID_API_INDEX_PITCH]*rd,
                                                   target_data[PID_API_INDEX_ROLL]*rd,
