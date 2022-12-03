@@ -398,9 +398,9 @@ int main(void)
 #elif 1     // 遥控器生成的目标测试
               sprintf(msg, "target_z=%.2f,target_pitch=%.2f,target_roll=%.2f,target_yaw=%.2f",
                                                               target_data[PID_API_INDEX_POSZ],
-                                                              target_data[PID_API_INDEX_PITCH],
-                                                              target_data[PID_API_INDEX_ROLL],
-                                                              target_data[PID_API_INDEX_YAW]);
+                                                              target_data[PID_API_INDEX_PITCH]*rd,
+                                                              target_data[PID_API_INDEX_ROLL]*rd,
+                                                              target_data[PID_API_INDEX_YAW]*rd);
 #elif 0     // 遥控器通道测试
               sprintf(msg, "PPM,CH1=%lu,CH2=%lu,CH3=%lu,CH4=%lu,CH5=%lu,CH6=%lu,CH7=%lu,CH8=%lu,CH9=%lu,CH10=%lu,SUM=%lu,",
                                                                   PPM_data[1],
