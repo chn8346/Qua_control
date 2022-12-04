@@ -7,7 +7,7 @@
 uint8_t zero_pos = 1; // 指向数据头的位置
 
 // 油门临界起飞点
-float force_zero = REMOTE_CONTROL_LOW_PPM_usf + Qua_TAKE_OFF_P*REMOTE_CONTROL_DIAMETER_PPM_usf;
+float force_zero = REMOTE_CONTROL_LOW_PPM_usf;// + Qua_TAKE_OFF_P*REMOTE_CONTROL_DIAMETER_PPM_usf;
 
 void remote_control_phase(uint32_t* ppm_data, float* ppm_phased){
     // ppm摇杆数据
@@ -31,7 +31,7 @@ void remote_control_phase(uint32_t* ppm_data, float* ppm_phased){
 //       ppm_phased[PPM_CH_FORCE] > -REMOTE_CONTROL_DEATH_PPM_usf){
 //        ppm_phased[PPM_CH_FORCE] = 0;
 //    }
-    ppm_phased[PPM_CH_FORCE] = ppm_phased[PPM_CH_FORCE]/REMOTE_CONTROL_RADIUS_PPM_usf;
+    ppm_phased[PPM_CH_FORCE] = ppm_phased[PPM_CH_FORCE]/REMOTE_CONTROL_DIAMETER_PPM_usf;//REMOTE_CONTROL_RADIUS_PPM_usf;
 
     ppm_phased[PPM_CH_PITCH] = (ppm_phased[PPM_CH_PITCH] - REMOTE_CONTROL_MID_PPM_usf)/REMOTE_CONTROL_RADIUS_PPM_usf;
 

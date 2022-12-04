@@ -38,34 +38,42 @@ void pwm_change(float value[4], TIM_HandleTypeDef* tim1, TIM_HandleTypeDef* tim2
 
     // PA2 -- CP -- CH3 -- TIM2
     W2 = (int)(value[0]*value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05));
     __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_3, W2);
 
     // PA3  -- CN -- CH4 -- TIM2
-    W2 = (int)(value[0]*value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05));
     __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_4, W2);
 
     // PA15 -- AP -- CH1 -- TIM2
-    W2 = (int)(value[1]*value[1]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05));
     __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_1, W2);
 
     // PB3  -- AN -- CH2 -- TIM2
-    W2 = (int)(value[1]*value[1]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05));
     __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_2, W2);
 
     // PE9  -- BP -- CH1 -- TIM1
-    W2 = (int)(value[2]*value[2]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05));
     __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_1, W2);
 
     // PE11 -- BN -- CH2 -- TIM1
-    W2 = (int)(value[2]*value[2]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05));
     __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_2, W2);
 
     // PE13 -- DP -- CH3 -- TIM1
-    W2 = (int)(value[3]*value[3]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05));
     __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_3, W2);
 
     // PE14 -- DN -- CH4 -- TIM1
-    W2 = (int)(value[3]*value[3]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period));
+    W2 = (int)(value[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05));
     __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_4, W2);
 }
 

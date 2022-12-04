@@ -200,7 +200,7 @@ int main(void)
     // 传感器初始化
     //MPU6050_init(&hi2c2);
     IMU_init(&hi2c2);
-    MAG3110_init(&hi2c1);
+    //MAG3110_init(&hi2c1);
     MAG_init(&hi2c1);
     // HMC5883_init(&hi2c1);
     // BMP180_init(&hi2c1);
@@ -378,6 +378,7 @@ int main(void)
 
           /* 输出 */
           // 控制需求给到 pwm生成器，修改占空比
+          Qua_pwm_rate[0] = PPM_precent_float[PPM_CH_FORCE];
           pwm_change(Qua_pwm_rate, &htim1, &htim2);
 
           /* 串口通信 */
