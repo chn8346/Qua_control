@@ -416,9 +416,9 @@ int main(void)
 #elif 0     // 飞控的力和力矩显示
               sprintf(msg, "F=%.5f,Pitch=%.5f,Roll=%.5f,Yaw=%.5f,target_z=%.2f,target_pitch=%.2f,target_roll=%.2f,target_yaw=%.2f",
                                                   Force_and_Moment[PID_API_INDEX_POSZ],
-                                                  Force_and_Moment[PID_API_INDEX_PITCH],
-                                                  Force_and_Moment[PID_API_INDEX_ROLL],
-                                                  Force_and_Moment[PID_API_INDEX_YAW],
+                                                  Force_and_Moment[PID_API_INDEX_PITCH]*rd,
+                                                  Force_and_Moment[PID_API_INDEX_ROLL]*rd,
+                                                  Force_and_Moment[PID_API_INDEX_YAW]*rd,
                                                   target_data[PID_API_INDEX_POSZ],
                                                   target_data[PID_API_INDEX_PITCH]*rd,
                                                   target_data[PID_API_INDEX_ROLL]*rd,
