@@ -380,7 +380,6 @@ int main(void)
 
           /* 输出 */
           // 控制需求给到 pwm生成器，修改占空比
-          Qua_pwm_rate[0] = PPM_precent_float[PPM_CH_FORCE];
           pwm_change(Qua_pwm_rate, &htim1, &htim2);
 
           /* 串口通信 */
