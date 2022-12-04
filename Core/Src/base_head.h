@@ -64,6 +64,13 @@ typedef struct{
 // #define PPM_nUS                 10      // PPM采样时间(us)
 #define PPM_data_len_limit         10      // PPM数据长度
 
+// 电调的相关参数
+// 1. X-rotor 系列电调参数
+#define PWM_LOW_LIMIT_XROTOR        0.08    // 占空比下限
+#define PWM_START_XROTOR            0.1     // 电机启动占空比
+#define PWM_TOP_LIMIT_XROTOR        0.22    // 电机满载占空比
+#define PWM_RANGE_SIZE_XROTOR       0.12    // 电调有效区间宽度(从上述参数计算得到，可减少计算量)
+
 /*
  *
  *  TODO parameter set

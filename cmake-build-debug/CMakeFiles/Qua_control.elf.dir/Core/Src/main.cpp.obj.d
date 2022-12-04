@@ -122,6 +122,9 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj: \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/PWM/PWM_generator.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/procession_operate/landing_process.h \
+ D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control/procession_operate/test_hove.h \
+ d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math/matrix.h \
  D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math/pre_process.h \
  d:\c0.project_public\stm32_project\qua_control\qua_control\core\src\base_head.h \

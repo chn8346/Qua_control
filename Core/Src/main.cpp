@@ -365,12 +365,14 @@ int main(void)
           estimate_data[PID_API_INDEX_YAW] = yaw;
           pid_controller.INPUT_estimate(estimate_data);
 
+          /* 插入遥控器部分的操作 */
           // 根据遥控器进行目标生成
           remote_control_phase(PPM_data, PPM_precent_float);
           PID_API_remote_control_gen_target(PPM_precent_float, target_data);
+
+          /* 继续控制器的操作 */
           // 填入预期
           pid_controller.INPUT_target(target_data);
-
 
           // 姿态控制器
           pid_controller.PROCESS_update();
@@ -389,7 +391,7 @@ int main(void)
 
               char msg[150] = {0};
 #if 0       // 姿态测试
-              sprintf(msg, "pitch=%f,roll=%f,yaw=%f,bt=%lu",pitch*rd, roll*rd, yaw*rd, battery_raw_value);
+              sprintf(msg, "pitch=%f,roll=%f,yaw=%f",pitch*rd, roll*rd, yaw*rd);
 #elif 0     // 遥控器行程测试
               sprintf(msg, "force=%.2f,pitch=%.2f,roll=%.2f,yaw=%.2f",
                                             PPM_precent_float[PPM_CH_FORCE],
@@ -404,10 +406,10 @@ int main(void)
                                                               target_data[PID_API_INDEX_YAW]*rd);
 #elif 1     // 油门显示
               sprintf(msg, "Q1=%.5f,Q2=%.5f,Q3=%.5f,Q4=%.5f,target_z=%.2f,target_pitch=%.2f,target_roll=%.2f,target_yaw=%.2f",
-                                                  (Qua_pwm_rate[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05)),
-                                                  (Qua_pwm_rate[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05)),
-                                                  (Qua_pwm_rate[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05)),
-                                                  (Qua_pwm_rate[0]*((float)PWM_Period*0.1) + ((float)PWM_Period*0.05)),
+                                                  Qua_pwm_rate[0],
+                                                  Qua_pwm_rate[1],
+                                                  Qua_pwm_rate[2],
+                                                  Qua_pwm_rate[3],
                                                   target_data[PID_API_INDEX_POSZ],
                                                   target_data[PID_API_INDEX_PITCH]*rd,
                                                   target_data[PID_API_INDEX_ROLL]*rd,

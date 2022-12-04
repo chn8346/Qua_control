@@ -108,13 +108,10 @@ void pid_API::get_OUTPUT(float Qua_out[4] ,float force_moment_out[6]) {
     // 对力进行限幅，小于0.1等同于0.1
     // if(force_moment_out[PID_API_INDEX_POSZ] < 0.1)force_moment_out[PID_API_INDEX_POSZ] = 0.1;
 
-    float* u;
-    u = force_moment_out;
-
-    float force = u[PID_API_INDEX_POSZ]+(float)Qua_MASS*(float)9.8; // 加上重力，防止下落
-    float pitch = u[PID_API_INDEX_PITCH];
-    float roll  = u[PID_API_INDEX_ROLL];
-    float yaw   = u[PID_API_INDEX_YAW];
+    float force = force_moment_out[PID_API_INDEX_POSZ]+(float)Qua_MASS*(float)9.8; // 加上重力，防止下落
+    float pitch = force_moment_out[PID_API_INDEX_PITCH];
+    float roll  = force_moment_out[PID_API_INDEX_ROLL];
+    float yaw   = force_moment_out[PID_API_INDEX_YAW];
     float p = pitch;
     float r = roll;
     float y = yaw;
@@ -206,8 +203,9 @@ void pid_API::traject_gen_control() {
 #define PID_API_remote_gen_target_YAW_LIMIT   0.002
 
 void PID_API_remote_control_gen_target(float* ppm_phased, float * target){
-    // 高度 -- 高于起飞油门时刻，target是正的，否则是负的
-    target[PID_API_INDEX_POSZ] = ppm_phased[PPM_CH_FORCE]*(float)PID_API_remote_gen_target_POSZ_LIMIT;
+    // 高度 -- 高于起飞油门时，target是正的，否则是负的
+    target[PID_API_INDEX_POSZ] = (ppm_phased[PPM_CH_FORCE] - (float)Qua_TAKE_OFF_P)
+                                        *(float)PID_API_remote_gen_target_POSZ_LIMIT;
 
     // pitch -- 位置形式
     target[PID_API_INDEX_PITCH] = ppm_phased[PPM_CH_PITCH]*(float)PITCH_LIMIT_RAD;
@@ -219,8 +217,12 @@ void PID_API_remote_control_gen_target(float* ppm_phased, float * target){
     target[PID_API_INDEX_YAW] =
             target[PID_API_INDEX_YAW] + ppm_phased[PPM_CH_YAW]*(float)PID_API_remote_gen_target_YAW_LIMIT;
 
-    // if(target[PID_API_INDEX_YAW] > 3.1415926)target[PID_API_INDEX_YAW] = target[PID_API_INDEX_YAW] - 3.1415926;
+    // TODO 【修改意见】 注意这里需要修改，让数值在【+-Pi】之间，由于后续处理步骤也有类似的操作，如果考虑性能，这个保留，之后的那个可以去掉
+    if(target[PID_API_INDEX_YAW] > 3.1415926)target[PID_API_INDEX_YAW] = target[PID_API_INDEX_YAW]
+                                                                                            - (float)Pi - (float)Pi;
 
+    if(target[PID_API_INDEX_YAW] < -3.1415926)target[PID_API_INDEX_YAW] = target[PID_API_INDEX_YAW]
+                                                                           + (float)Pi + (float)Pi;
 }
 
 #elif CONTROL_PID_MODEL == CONTROL_PID_MODEL_STAY // 角度控制
