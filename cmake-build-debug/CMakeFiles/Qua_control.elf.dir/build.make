@@ -208,10 +208,38 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/control/control_api.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Qua_control.elf.dir/Core/Src/control/control_api.cpp.s"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control\control_api.cpp -o CMakeFiles\Qua_control.elf.dir\Core\Src\control\control_api.cpp.s
 
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj: ../Core/Src/control/procession_operate/landing_process.cpp
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj"
+	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\control\procession_operate\landing_process.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\control\procession_operate\landing_process.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control\procession_operate\landing_process.cpp
+
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.i"
+	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control\procession_operate\landing_process.cpp > CMakeFiles\Qua_control.elf.dir\Core\Src\control\procession_operate\landing_process.cpp.i
+
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.s"
+	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control\procession_operate\landing_process.cpp -o CMakeFiles\Qua_control.elf.dir\Core\Src\control\procession_operate\landing_process.cpp.s
+
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj: ../Core/Src/control/procession_operate/test_hove.cpp
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj"
+	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\control\procession_operate\test_hove.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\control\procession_operate\test_hove.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control\procession_operate\test_hove.cpp
+
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.i"
+	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control\procession_operate\test_hove.cpp > CMakeFiles\Qua_control.elf.dir\Core\Src\control\procession_operate\test_hove.cpp.i
+
+CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.s"
+	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\control\procession_operate\test_hove.cpp -o CMakeFiles\Qua_control.elf.dir\Core\Src\control\procession_operate\test_hove.cpp.s
+
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.obj: ../Core/Src/estimate/EKF/EKF_update.c
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\estimate\EKF\EKF_update.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\estimate\EKF\EKF_update.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate\EKF\EKF_update.c
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.i: cmake_force
@@ -225,7 +253,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.obj: ../Core/Src/estimate/Mahony/MahonyAHRS.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\estimate\Mahony\MahonyAHRS.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\estimate\Mahony\MahonyAHRS.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate\Mahony\MahonyAHRS.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.i: cmake_force
@@ -239,7 +267,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.s: cmake_
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.obj: ../Core/Src/estimate/Wick/MadgwickAHRS.c
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\estimate\Wick\MadgwickAHRS.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\estimate\Wick\MadgwickAHRS.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\estimate\Wick\MadgwickAHRS.c
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.i: cmake_force
@@ -253,7 +281,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.s: cmake_fo
 CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj: ../Core/Src/main.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\main.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\main.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\main.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.i: cmake_force
@@ -267,7 +295,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/main.cpp.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.obj: ../Core/Src/math/crc16.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\math\crc16.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\math\crc16.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math\crc16.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.i: cmake_force
@@ -281,7 +309,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/math/crc16.cpp.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.obj: ../Core/Src/math/matrix.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\math\matrix.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\math\matrix.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math\matrix.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.i: cmake_force
@@ -295,7 +323,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/math/matrix.cpp.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.obj: ../Core/Src/math/pre_process.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\math\pre_process.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\math\pre_process.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math\pre_process.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.i: cmake_force
@@ -309,7 +337,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/math/pre_process.cpp.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.obj: ../Core/Src/math/quat.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\math\quat.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\math\quat.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\math\quat.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.i: cmake_force
@@ -323,7 +351,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/math/quat.cpp.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/GPS/BN880.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/GPS/BN880.cpp.obj: ../Core/Src/sensor_socket/GPS/BN880.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/GPS/BN880.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/GPS/BN880.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/GPS/BN880.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/GPS/BN880.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\GPS\BN880.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\GPS\BN880.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\GPS\BN880.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/GPS/BN880.cpp.i: cmake_force
@@ -337,7 +365,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/GPS/BN880.cpp.s: cmake_for
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp.obj: ../Core/Src/sensor_socket/gyro_acc/ICM20602.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\gyro_acc\ICM20602.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\gyro_acc\ICM20602.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\gyro_acc\ICM20602.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp.i: cmake_force
@@ -351,7 +379,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/ICM20602.cpp.s: c
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp.obj: ../Core/Src/sensor_socket/gyro_acc/MPU6050.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\gyro_acc\MPU6050.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\gyro_acc\MPU6050.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\gyro_acc\MPU6050.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp.i: cmake_force
@@ -365,7 +393,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/gyro_acc/MPU6050.cpp.s: cm
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/i2c/hard_i2c.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/i2c/hard_i2c.cpp.obj: ../Core/Src/sensor_socket/i2c/hard_i2c.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/i2c/hard_i2c.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/i2c/hard_i2c.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/i2c/hard_i2c.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/i2c/hard_i2c.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\i2c\hard_i2c.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\i2c\hard_i2c.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\i2c\hard_i2c.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/i2c/hard_i2c.cpp.i: cmake_force
@@ -379,7 +407,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/i2c/hard_i2c.cpp.s: cmake_
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/HMC5883.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/HMC5883.cpp.obj: ../Core/Src/sensor_socket/mag/HMC5883.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/HMC5883.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/HMC5883.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/HMC5883.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/HMC5883.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\mag\HMC5883.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\mag\HMC5883.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\mag\HMC5883.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/HMC5883.cpp.i: cmake_force
@@ -393,7 +421,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/HMC5883.cpp.s: cmake_f
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/IST8310.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/IST8310.cpp.obj: ../Core/Src/sensor_socket/mag/IST8310.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/IST8310.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/IST8310.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/IST8310.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/IST8310.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\mag\IST8310.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\mag\IST8310.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\mag\IST8310.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/IST8310.cpp.i: cmake_force
@@ -407,7 +435,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/IST8310.cpp.s: cmake_f
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/Mag3110.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/Mag3110.cpp.obj: ../Core/Src/sensor_socket/mag/Mag3110.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/Mag3110.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/Mag3110.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/Mag3110.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/Mag3110.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\mag\Mag3110.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\mag\Mag3110.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\mag\Mag3110.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/Mag3110.cpp.i: cmake_force
@@ -421,7 +449,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/mag/Mag3110.cpp.s: cmake_f
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/BMP180.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/BMP180.cpp.obj: ../Core/Src/sensor_socket/pressure/BMP180.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/BMP180.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/BMP180.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/BMP180.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/BMP180.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\pressure\BMP180.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\pressure\BMP180.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\pressure\BMP180.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/BMP180.cpp.i: cmake_force
@@ -435,7 +463,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/BMP180.cpp.s: cma
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/SPL06.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/SPL06.cpp.obj: ../Core/Src/sensor_socket/pressure/SPL06.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/SPL06.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/SPL06.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/SPL06.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/SPL06.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\pressure\SPL06.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\pressure\SPL06.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\pressure\SPL06.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/SPL06.cpp.i: cmake_force
@@ -449,7 +477,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/pressure/SPL06.cpp.s: cmak
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.obj: ../Core/Src/sensor_socket/sensor_calibrate.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\sensor_calibrate.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\sensor_calibrate.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\sensor_calibrate.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.i: cmake_force
@@ -463,7 +491,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_calibrate.cpp.s: cm
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_socket.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_socket.cpp.obj: ../Core/Src/sensor_socket/sensor_socket.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_socket.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_socket.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_socket.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_socket.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\sensor_socket.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\sensor_socket.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\sensor_socket.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_socket.cpp.i: cmake_force
@@ -477,7 +505,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/sensor_socket.cpp.s: cmake
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.obj: ../Core/Src/sensor_socket/spi/spi.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\spi\spi.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\spi\spi.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\spi\spi.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.i: cmake_force
@@ -491,7 +519,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/spi/spi.cpp.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj: ../Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\ultra_sonic\Ultra_sonic.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sensor_socket\ultra_sonic\Ultra_sonic.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sensor_socket\ultra_sonic\Ultra_sonic.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cpp.i: cmake_force
@@ -505,7 +533,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sensor_socket/ultra_sonic/Ultra_sonic.cp
 CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: ../Core/Src/stm32f4xx_hal_msp.c
 CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\stm32f4xx_hal_msp.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\stm32f4xx_hal_msp.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\stm32f4xx_hal_msp.c
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.i: cmake_force
@@ -519,7 +547,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_hal_msp.c.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.obj: ../Core/Src/stm32f4xx_it.c
 CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\stm32f4xx_it.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\stm32f4xx_it.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\stm32f4xx_it.c
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.i: cmake_force
@@ -533,7 +561,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/stm32f4xx_it.c.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/syscalls.c.obj: ../Core/Src/syscalls.c
 CMakeFiles/Qua_control.elf.dir/Core/Src/syscalls.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/syscalls.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/syscalls.c.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\syscalls.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\syscalls.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\syscalls.c
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/syscalls.c.i: cmake_force
@@ -547,7 +575,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/syscalls.c.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/sysmem.c.obj: ../Core/Src/sysmem.c
 CMakeFiles/Qua_control.elf.dir/Core/Src/sysmem.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/sysmem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/sysmem.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/sysmem.c.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\sysmem.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\sysmem.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\sysmem.c
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/sysmem.c.i: cmake_force
@@ -561,7 +589,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/sysmem.c.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/system_stm32f4xx.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/system_stm32f4xx.c.obj: ../Core/Src/system_stm32f4xx.c
 CMakeFiles/Qua_control.elf.dir/Core/Src/system_stm32f4xx.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/system_stm32f4xx.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/Qua_control.elf.dir/Core/Src/system_stm32f4xx.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/system_stm32f4xx.c.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\system_stm32f4xx.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\system_stm32f4xx.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\system_stm32f4xx.c
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/system_stm32f4xx.c.i: cmake_force
@@ -575,7 +603,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/system_stm32f4xx.c.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.obj: ../Core/Src/toolkit/pid_control.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\toolkit\pid_control.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\toolkit\pid_control.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\toolkit\pid_control.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.i: cmake_force
@@ -589,7 +617,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pid_control.cpp.s: cmake_force
 CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj: ../Core/Src/toolkit/pos_velo_estimate_testv1.cpp
 CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.obj -MF CMakeFiles\Qua_control.elf.dir\Core\Src\toolkit\pos_velo_estimate_testv1.cpp.obj.d -o CMakeFiles\Qua_control.elf.dir\Core\Src\toolkit\pos_velo_estimate_testv1.cpp.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Src\toolkit\pos_velo_estimate_testv1.cpp
 
 CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.i: cmake_force
@@ -602,7 +630,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Src/toolkit/pos_velo_estimate_testv1.cpp.s: 
 
 CMakeFiles/Qua_control.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj: ../Core/Startup/startup_stm32f407vetx.s
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building ASM object CMakeFiles/Qua_control.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object CMakeFiles/Qua_control.elf.dir/Core/Startup/startup_stm32f407vetx.s.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles\Qua_control.elf.dir\Core\Startup\startup_stm32f407vetx.s.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Core\Startup\startup_stm32f407vetx.s
 
 CMakeFiles/Qua_control.elf.dir/Core/Startup/startup_stm32f407vetx.s.i: cmake_force
@@ -616,7 +644,7 @@ CMakeFiles/Qua_control.elf.dir/Core/Startup/startup_stm32f407vetx.s.s: cmake_for
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i: cmake_force
@@ -630,7 +658,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i: cmake_force
@@ -644,7 +672,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ad
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_adc_ex.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i: cmake_force
@@ -658,7 +686,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ad
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_cortex.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i: cmake_force
@@ -672,7 +700,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_co
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i: cmake_force
@@ -686,7 +714,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dm
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_dma_ex.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i: cmake_force
@@ -700,7 +728,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dm
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_exti.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i: cmake_force
@@ -714,7 +742,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ex
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i: cmake_force
@@ -728,7 +756,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fl
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ex.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i: cmake_force
@@ -742,7 +770,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fl
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_flash_ramfunc.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i: cmake_force
@@ -756,7 +784,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_fl
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_gpio.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i: cmake_force
@@ -770,7 +798,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gp
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.i: cmake_force
@@ -784,7 +812,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_i2c_ex.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.i: cmake_force
@@ -798,7 +826,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i: cmake_force
@@ -812,7 +840,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pw
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_pwr_ex.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i: cmake_force
@@ -826,7 +854,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pw
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i: cmake_force
@@ -840,7 +868,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rc
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_rcc_ex.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i: cmake_force
@@ -854,7 +882,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rc
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sd.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sd.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_sd.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c.i: cmake_force
@@ -868,7 +896,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_spi.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i: cmake_force
@@ -882,7 +910,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sp
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i: cmake_force
@@ -896,7 +924,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ti
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_tim_ex.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i: cmake_force
@@ -910,7 +938,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ti
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_hal_uart.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i: cmake_force
@@ -924,7 +952,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_ua
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_adc.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_adc.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_adc.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i: cmake_force
@@ -938,7 +966,7 @@ CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c.obj: CMakeFiles/Qua_control.elf.dir/flags.make
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c.obj: ../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c.obj: CMakeFiles/Qua_control.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c.obj"
 	C:\scipts\arm-gnu-toolchain-12.2.mpacbti-bet1-mingw-w64-i686-arm-none-eabi\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c.obj -MF CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_sdmmc.c.obj.d -o CMakeFiles\Qua_control.elf.dir\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_sdmmc.c.obj -c D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_sdmmc.c
 
 CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c.i: cmake_force
@@ -961,6 +989,8 @@ Qua_control_elf_OBJECTS = \
 "CMakeFiles/Qua_control.elf.dir/Core/Src/control/PID/pid_base.cpp.obj" \
 "CMakeFiles/Qua_control.elf.dir/Core/Src/control/PWM/PWM_generator.cpp.obj" \
 "CMakeFiles/Qua_control.elf.dir/Core/Src/control/control_api.cpp.obj" \
+"CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj" \
+"CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj" \
 "CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.obj" \
 "CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.obj" \
 "CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.obj" \
@@ -1028,6 +1058,8 @@ Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/control/PID/pid_api.cpp
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/control/PID/pid_base.cpp.obj
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/control/PWM/PWM_generator.cpp.obj
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/control/control_api.cpp.obj
+Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj
+Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/EKF/EKF_update.c.obj
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Mahony/MahonyAHRS.cpp.obj
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Core/Src/estimate/Wick/MadgwickAHRS.c.obj
@@ -1084,7 +1116,7 @@ Qua_control.elf: CMakeFiles/Qua_control.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/build.make
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/objects1.rsp
 Qua_control.elf: CMakeFiles/Qua_control.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Linking CXX executable Qua_control.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\c0.Project_Public\stm32_project\Qua_control\Qua_control\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Linking CXX executable Qua_control.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Qua_control.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Qua_control.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/cmake-build-debug/Qua_control.bin"

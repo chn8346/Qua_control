@@ -22,7 +22,9 @@
 #include "control/PID/pid_api.h"    // pid和其他控制器的联合API
 #include "control/ADRC/track_differentiator.h"  // 追踪微分器
 #include "control/Filter_digital/digital_filter.h" // 数字滤波器
-#include "control/PWM/PWM_generator.h"
+#include "control/PWM/PWM_generator.h"  // pwm生成器
+#include "control/procession_operate/landing_process.h" // 过程控制： 降落流程
+#include "control/procession_operate/test_hove.h"   // 控制过程： 测试悬停性能
 
 // 数学库
 #include "math/matrix.h"      // 矩阵计算库
@@ -43,6 +45,6 @@
 
 #include "sensor_socket/i2c/hard_i2c.h" // 硬件I2C工具包
 #include "sensor_socket/spi/spi.h"      // spi工具包
-#include "TR/remote_control_v1.h"
+#include "TR/remote_control_v1.h"   // 遥控器解析
 
 #endif // QUA_CONTROL_HEAD_H

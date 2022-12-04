@@ -368,6 +368,54 @@ Core/Src/control/control_api.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/control_api.cpp.s
 .PHONY : Core/Src/control/control_api.cpp.s
 
+Core/Src/control/procession_operate/landing_process.obj: Core/Src/control/procession_operate/landing_process.cpp.obj
+.PHONY : Core/Src/control/procession_operate/landing_process.obj
+
+# target to build an object file
+Core/Src/control/procession_operate/landing_process.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj
+.PHONY : Core/Src/control/procession_operate/landing_process.cpp.obj
+
+Core/Src/control/procession_operate/landing_process.i: Core/Src/control/procession_operate/landing_process.cpp.i
+.PHONY : Core/Src/control/procession_operate/landing_process.i
+
+# target to preprocess a source file
+Core/Src/control/procession_operate/landing_process.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.i
+.PHONY : Core/Src/control/procession_operate/landing_process.cpp.i
+
+Core/Src/control/procession_operate/landing_process.s: Core/Src/control/procession_operate/landing_process.cpp.s
+.PHONY : Core/Src/control/procession_operate/landing_process.s
+
+# target to generate assembly for a file
+Core/Src/control/procession_operate/landing_process.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.s
+.PHONY : Core/Src/control/procession_operate/landing_process.cpp.s
+
+Core/Src/control/procession_operate/test_hove.obj: Core/Src/control/procession_operate/test_hove.cpp.obj
+.PHONY : Core/Src/control/procession_operate/test_hove.obj
+
+# target to build an object file
+Core/Src/control/procession_operate/test_hove.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj
+.PHONY : Core/Src/control/procession_operate/test_hove.cpp.obj
+
+Core/Src/control/procession_operate/test_hove.i: Core/Src/control/procession_operate/test_hove.cpp.i
+.PHONY : Core/Src/control/procession_operate/test_hove.i
+
+# target to preprocess a source file
+Core/Src/control/procession_operate/test_hove.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.i
+.PHONY : Core/Src/control/procession_operate/test_hove.cpp.i
+
+Core/Src/control/procession_operate/test_hove.s: Core/Src/control/procession_operate/test_hove.cpp.s
+.PHONY : Core/Src/control/procession_operate/test_hove.s
+
+# target to generate assembly for a file
+Core/Src/control/procession_operate/test_hove.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.s
+.PHONY : Core/Src/control/procession_operate/test_hove.cpp.s
+
 Core/Src/estimate/EKF/EKF_update.obj: Core/Src/estimate/EKF/EKF_update.c.obj
 .PHONY : Core/Src/estimate/EKF/EKF_update.obj
 
@@ -1663,6 +1711,12 @@ help:
 	@echo ... Core/Src/control/control_api.obj
 	@echo ... Core/Src/control/control_api.i
 	@echo ... Core/Src/control/control_api.s
+	@echo ... Core/Src/control/procession_operate/landing_process.obj
+	@echo ... Core/Src/control/procession_operate/landing_process.i
+	@echo ... Core/Src/control/procession_operate/landing_process.s
+	@echo ... Core/Src/control/procession_operate/test_hove.obj
+	@echo ... Core/Src/control/procession_operate/test_hove.i
+	@echo ... Core/Src/control/procession_operate/test_hove.s
 	@echo ... Core/Src/estimate/EKF/EKF_update.obj
 	@echo ... Core/Src/estimate/EKF/EKF_update.i
 	@echo ... Core/Src/estimate/EKF/EKF_update.s
