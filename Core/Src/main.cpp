@@ -404,15 +404,11 @@ int main(void)
                                                               target_data[PID_API_INDEX_ROLL]*rd,
                                                               target_data[PID_API_INDEX_YAW]*rd);
 #elif 1     // 油门显示
-              sprintf(msg, "Q1=%.5f,Q2=%.5f,Q3=%.5f,Q4=%.5f,target_z=%.2f,target_pitch=%.2f,target_roll=%.2f,target_yaw=%.2f",
-                                                  Qua_pwm_rate[0],
-                                                  Qua_pwm_rate[1],
-                                                  Qua_pwm_rate[2],
-                                                  Qua_pwm_rate[3],
-                                                  target_data[PID_API_INDEX_POSZ],
-                                                  target_data[PID_API_INDEX_PITCH]*rd,
-                                                  target_data[PID_API_INDEX_ROLL]*rd,
-                                                  target_data[PID_API_INDEX_YAW]*rd);
+              sprintf(msg, "Q1=%d,Q2=%d,Q3=%d,Q4=%d, ",
+                      (int)(Qua_pwm_rate[0]*PWM_Period),
+                      (int)(Qua_pwm_rate[1]*PWM_Period),
+                      (int)(Qua_pwm_rate[2]*PWM_Period),
+                      (int)(Qua_pwm_rate[3]*PWM_Period));
 #elif 0     // 飞控的力和力矩显示
               sprintf(msg, "F=%.5f,Pitch=%.5f,Roll=%.5f,Yaw=%.5f,target_z=%.2f,target_pitch=%.2f,target_roll=%.2f,target_yaw=%.2f",
                                                   Force_and_Moment[PID_API_INDEX_POSZ],
