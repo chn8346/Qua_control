@@ -38,8 +38,8 @@ typedef struct{
 
 // 飞行器参数
 #define Qua_MASS                2.0     // 飞行器质量
-#define Qua_Kf                  0.001   // 飞行器拉力系数
-#define Qua_Km                  0.001   // 飞行器力矩系数
+#define Qua_Kf                  0.0001   // 飞行器拉力系数
+#define Qua_Km                  0.0001   // 飞行器力矩系数
 #define Qua_TAKE_OFF_P          0.45    // 飞行器起飞油门
 #define Qua_DIAMETER            0.3     // 飞行器桨距（电机和物理中心点距离）
 
@@ -70,6 +70,19 @@ typedef struct{
 #define PWM_START_XROTOR            0.1     // 电机启动占空比
 #define PWM_TOP_LIMIT_XROTOR        0.22    // 电机满载占空比
 #define PWM_RANGE_SIZE_XROTOR       0.12    // 电调有效区间宽度(从上述参数计算得到，可减少计算量)
+
+/*
+ *      PPM 通道
+ *
+ *      注意通道从0开始算，例如：通道1，数值为0
+ * */
+
+
+#define PPM_CH_FORCE    2       // 注意通道从0开始算，例如：通道1，数值为0
+#define PPM_CH_YAW      3       // 注意通道从0开始算，例如：通道1，数值为0
+#define PPM_CH_PITCH    1       // 注意通道从0开始算，例如：通道1，数值为0
+#define PPM_CH_ROLL     0       // 注意通道从0开始算，例如：通道1，数值为0
+
 
 /*
  *
@@ -304,18 +317,6 @@ typedef struct{
 #define PWM_CN_TIM_CHANNEL  TIM_CHANNEL_4
 #define PWM_DP_TIM_CHANNEL  TIM_CHANNEL_3
 #define PWM_DN_TIM_CHANNEL  TIM_CHANNEL_4
-
-/*
- *      PPM 通道
- *
- *      注意通道从0开始算，例如：通道1，数值为0
- * */
-
-
-#define PPM_CH_FORCE    2       // 注意通道从0开始算，例如：通道1，数值为0
-#define PPM_CH_YAW      3       // 注意通道从0开始算，例如：通道1，数值为0
-#define PPM_CH_PITCH    1       // 注意通道从0开始算，例如：通道1，数值为0
-#define PPM_CH_ROLL     0       // 注意通道从0开始算，例如：通道1，数值为0
 
 
 #endif //QUA_CONTROL_BASE_HEAD_H

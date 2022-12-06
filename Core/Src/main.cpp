@@ -339,7 +339,7 @@ int main(void)
           //BMP180_get_pressure(&bmp_data);
 
           // 超声波
-          sonic_requist_distance(&huart3);
+          // sonic_requist_distance(&huart3);
 
           // 电压测量 ADC 测量信号
           // hadc1.Instance->CR2 |= 0x4000;
@@ -363,7 +363,7 @@ int main(void)
           // 填入estimate数值
           estimate_data[PID_API_INDEX_PITCH] = pitch;   // 注意！！！！ 控制用的是弧度
           estimate_data[PID_API_INDEX_ROLL] = roll;
-          estimate_data[PID_API_INDEX_YAW] = yaw;
+          estimate_data[PID_API_INDEX_YAW] =  0; //yaw;
           pid_controller.INPUT_estimate(estimate_data);
 
           /* 插入遥控器部分的操作 */
@@ -373,6 +373,7 @@ int main(void)
 
           /* 继续控制器的操作 */
           // 填入预期
+          target_data[PID_API_INDEX_YAW] = 0; // test code
           pid_controller.INPUT_target(target_data);
 
           // 姿态控制器
@@ -390,8 +391,14 @@ int main(void)
               LED1_TOGGLE;
 
               char msg[150] = {0};
-#if 0       // 姿态测试
-              sprintf(msg, "pitch=%f,roll=%f,yaw=%f",pitch*rd, roll*rd, yaw*rd);
+#if 1       // 姿态测试
+              sprintf(msg, "pitch=%f,roll=%f,yaw=%f,Q1=%d,Q2=%d,Q3=%d,Q4=%d, ",pitch*rd,
+                                                                                roll*rd,
+                                                                                yaw*rd,
+                                                                                (int)(Qua_pwm_rate[0]*PWM_Period),
+                                                                                (int)(Qua_pwm_rate[1]*PWM_Period),
+                                                                                (int)(Qua_pwm_rate[2]*PWM_Period),
+                                                                                (int)(Qua_pwm_rate[3]*PWM_Period));
 #elif 0     // 遥控器行程测试
               sprintf(msg, "force=%.2f,pitch=%.2f,roll=%.2f,yaw=%.2f",
                                             PPM_precent_float[PPM_CH_FORCE],

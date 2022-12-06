@@ -428,20 +428,20 @@ void calibrate_QX(float * origin_acc, float * origin_angle, float * origin_mag){
 
 float t1, t2;
 
-t1 =  origin_acc[0]*(float)0.7071068 + origin_acc[1]*(float)0.7071068;
-t2 = -origin_acc[0]*(float)0.7071068 + origin_acc[1]*(float)0.7071068;
+t1 = -origin_acc[0]*(float)0.7071068 + origin_acc[1]*(float)0.7071068;
+t2 = origin_acc[0]*(float)0.7071068 + origin_acc[1]*(float)0.7071068;
 
 origin_acc[0] = t1;
 origin_acc[1] = t2;
 
-t1 =  origin_angle[0]*(float)0.7071068 + origin_angle[1]*(float)0.7071068;
-t2 = -origin_angle[0]*(float)0.7071068 + origin_angle[1]*(float)0.7071068;
+t1 = -origin_angle[0]*(float)0.7071068 + origin_angle[1]*(float)0.7071068;
+t2 = origin_angle[0]*(float)0.7071068 + origin_angle[1]*(float)0.7071068;
 
 origin_angle[0] = t1;
 origin_angle[1] = t2;
 
-t1 =  origin_mag[0]*(float)0.7071068 + origin_mag[1]*(float)0.7071068;
-t2 = -origin_mag[0]*(float)0.7071068 + origin_mag[1]*(float)0.7071068;
+t1 = -origin_mag[0]*(float)0.7071068 + origin_mag[1]*(float)0.7071068;
+t2 = origin_mag[0]*(float)0.7071068 + origin_mag[1]*(float)0.7071068;
 
 origin_mag[0] = t1;
 origin_mag[1] = t2;
