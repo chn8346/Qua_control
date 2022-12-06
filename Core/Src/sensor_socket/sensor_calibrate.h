@@ -46,6 +46,9 @@ void uart_transmit_with_next_sensor_clb(UART_HandleTypeDef* uart, uint8_t* data,
 // 根据重力和加速度信息对重力和拉力进行分离，获得更准确的状态信息
 void gravity_altitude_uni_estimate(const float* gravity_norm, float* altitude_or_q, float yaw);
 
+// 对Q-X构型进行二次数据加工
+void calibrate_QX(float * origin_acc, float * origin_angle, float * origin_mag);
+
 // TODO 【急】 基于姿态对磁力计数据进行补偿
 
 // 用于快速init使用的经验数值

@@ -418,6 +418,36 @@ void gravity_altitude_uni_estimate(const float* gravity_norm, float* altitude_or
 #endif
 }
 
+// 对Q-X构型进行二次数据加工
+void calibrate_QX(float * origin_acc, float * origin_angle, float * origin_mag){
+//        [   cos(u),  sin(u),   0
+//           -sin(u),  cos(u),   0
+//              0   ,    0   ,   1  ];
+
+//         0.7071067811865476
+
+float t1, t2;
+
+t1 =  origin_acc[0]*(float)0.7071068 + origin_acc[1]*(float)0.7071068;
+t2 = -origin_acc[0]*(float)0.7071068 + origin_acc[1]*(float)0.7071068;
+
+origin_acc[0] = t1;
+origin_acc[1] = t2;
+
+t1 =  origin_angle[0]*(float)0.7071068 + origin_angle[1]*(float)0.7071068;
+t2 = -origin_angle[0]*(float)0.7071068 + origin_angle[1]*(float)0.7071068;
+
+origin_angle[0] = t1;
+origin_angle[1] = t2;
+
+t1 =  origin_mag[0]*(float)0.7071068 + origin_mag[1]*(float)0.7071068;
+t2 = -origin_mag[0]*(float)0.7071068 + origin_mag[1]*(float)0.7071068;
+
+origin_mag[0] = t1;
+origin_mag[1] = t2;
+
+}
+
 // 求取平方根倒数
 float invSqrt1_cbl(float x) {
     float halfx = 0.5f * x;
