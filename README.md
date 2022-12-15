@@ -2,8 +2,6 @@
 
 A flight Control platform
 
-Author: Fanch0554@163.com
-
 * Main program in ./Core/Src/
 
 ## program struct
