@@ -21,11 +21,11 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "../Core/Inc"
-  "../Drivers/STM32F4xx_HAL_Driver/Inc"
-  "../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
-  "../Drivers/CMSIS/Device/ST/STM32F4xx/Include"
-  "../Drivers/CMSIS/Include"
+  "D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Inc"
+  "D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc"
+  "D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+  "D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+  "D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Drivers/CMSIS/Include"
   )
 
 # The set of dependency files which are needed:
