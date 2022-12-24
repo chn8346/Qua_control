@@ -27,7 +27,7 @@ typedef struct{
 
 
 /*
- *  TODO 系统参数
+ *  TODO 系统参数  移植时【必须】重新设置
  * */
 
 #define SAMPLE_RATE       200         // 采样速度
@@ -48,8 +48,8 @@ typedef struct{
 #define CONTROLLER_TYPE_ADRC    0xAF
 
 // LIMIT 飞行器控制限幅
-#define PITCH_LIMIT_DEGREE      10      // pitch角度限幅 -- 角度制
-#define ROLL_LIMIT_DEGREE       10      // roll角度限幅  -- 角度制
+#define PITCH_LIMIT_DEGREE         10      // pitch角度限幅 -- 角度制
+#define ROLL_LIMIT_DEGREE          10      // roll角度限幅  -- 角度制
 // #define YAW_LIMIT_DEGREE        10      // yaw角度限幅   -- 角度制
 
 #define PITCH_LIMIT_RAD   0.174  // 小于10度
@@ -70,6 +70,17 @@ typedef struct{
 #define PWM_START_XROTOR            0.1     // 电机启动占空比
 #define PWM_TOP_LIMIT_XROTOR        0.22    // 电机满载占空比
 #define PWM_RANGE_SIZE_XROTOR       0.12    // 电调有效区间宽度(从上述参数计算得到，可减少计算量)
+
+// 构型设置 + x H
+#define STRUCT_TYPE_plus            0x01    // ‘+’ 构型 -- 常规构型
+#define STRUCT_TYPE_x               0x02    // ‘X’ 构型 -- 常规构型
+#define STRUCT_TYPE_H               0x03    // ‘H’ 构型 -- 穿越机构型
+#define STRUCT_TYPE_H_T             0x04    // ‘工’ 构型 -- 穿越机构型
+
+#define STRUCT_TYPE                 STRUCT_TYPE_H
+
+// 构型对应的电机信息
+#define Motor_1_CW
 
 /*
  *      PPM 通道
