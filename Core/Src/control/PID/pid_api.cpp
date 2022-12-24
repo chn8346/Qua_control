@@ -117,6 +117,8 @@ void pid_API::get_OUTPUT(float Qua_out[4] ,float force_moment_out[6]) {
     float y = yaw;
 
 #define shrink_K   ((float)0.75)
+
+#if STRUCT_TYPE == STRUCT_TYPE_plus  // 使用'+'构型
     // 力矩进行约束计算 -- 保持转速平方为正数
     if(force/2/Qua_Kf*shrink_K < (abs(yaw)/2/Qua_Km + (abs(roll) + abs(pitch))/Qua_Kf/Qua_DIAMETER)) {
         y   = yaw  *(force/2/Qua_Kf*shrink_K/(abs(yaw)/2/Qua_Km + (abs(roll)+abs(pitch))/Qua_Kf/Qua_DIAMETER));
@@ -125,14 +127,30 @@ void pid_API::get_OUTPUT(float Qua_out[4] ,float force_moment_out[6]) {
     }
 
     // 求解四旋翼转速
-    Qua_out[0] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km -  r/(float)2.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[0] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km - r/(float)2.0/Qua_Kf/Qua_DIAMETER;
     Qua_out[1] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km + p/(float)2.0/Qua_Kf/Qua_DIAMETER;
-    Qua_out[2] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km +  r/(float)2.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[2] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km + r/(float)2.0/Qua_Kf/Qua_DIAMETER;
     Qua_out[3] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km - p/(float)2.0/Qua_Kf/Qua_DIAMETER;
 
-    // 油门比例进行等幅缩小(和油门gu)
+#elif STRUCT_TYPE == STRUCT_TYPE_x || STRUCT_TYPE == STRUCT_TYPE_H   // 使用x构型或者H构型
+    // 力矩进行约束计算 -- 保持转速平方为正数
+    if(force/Qua_Kf*shrink_K < (abs(yaw)/Qua_Km + (abs(roll) + abs(pitch))/Qua_Kf/Qua_DIAMETER)) {
+        y   = yaw  *(force/Qua_Kf*shrink_K/(abs(yaw)/Qua_Km + (abs(roll)+abs(pitch))/Qua_Kf/Qua_DIAMETER));
+        r   = roll *(force/Qua_Kf*shrink_K/(abs(yaw)/Qua_Km + (abs(roll)+abs(pitch))/Qua_Kf/Qua_DIAMETER));
+        p   = pitch*(force/Qua_Kf*shrink_K/(abs(yaw)/Qua_Km + (abs(roll)+abs(pitch))/Qua_Kf/Qua_DIAMETER));
+    }
+
+    // 求解四旋翼转速
+    Qua_out[0] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km - (r+p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[1] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km + (r-p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[2] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km + (r+p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[3] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km - (r-p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+#endif
+
+    // 油门比例进行等幅缩小(和油门比较进行放缩)
     float sum = Qua_out[0] + Qua_out[1] + Qua_out[2] + Qua_out[3];
     float K = force/Qua_MASS/9.8*Qua_TAKE_OFF_P*4/(sum);
+
     // 开方得到转速数值
     Qua_out[0] = sqrt(Qua_out[0]*K);
     Qua_out[1] = sqrt(Qua_out[1]*K);
