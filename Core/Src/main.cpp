@@ -346,7 +346,10 @@ int main(void)
 
           // 传感器校准
           calibrate_return_data(datap, datap+3, mag_fdata,0,0,0,0);
+
+          // 传感器如果旋转方向不一样
           calibrate_QX(datap, datap + 3, mag_fdata);
+
 
           /* 状态估计 */
           MahonyAHRSupdate(datap[3],datap[4],datap[5],

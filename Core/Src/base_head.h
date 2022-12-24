@@ -79,8 +79,8 @@ typedef struct{
 
 #define STRUCT_TYPE                 STRUCT_TYPE_H
 
-// 构型对应的电机信息
-#define Motor_1_CW
+// 构型对应的通道
+
 
 /*
  *      PPM 通道
