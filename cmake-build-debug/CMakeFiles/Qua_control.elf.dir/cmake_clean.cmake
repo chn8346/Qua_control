@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Qua_control.elf.dir/Core/Src/control/PWM/PWM_generator.cpp.obj.d"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/control/control_api.cpp.obj"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/control/control_api.cpp.obj.d"
+  "CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/hove_alt_offset.cpp.obj"
+  "CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/hove_alt_offset.cpp.obj.d"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/landing_process.cpp.obj.d"
   "CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/test_hove.cpp.obj"

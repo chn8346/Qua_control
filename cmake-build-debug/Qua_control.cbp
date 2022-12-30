@@ -171,6 +171,12 @@
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/control_api.h">
 			<Option target="Qua_control.elf"/>
 		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/procession_operate/hove_alt_offset.cpp">
+			<Option target="Qua_control.elf"/>
+		</Unit>
+		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/procession_operate/hove_alt_offset.h">
+			<Option target="Qua_control.elf"/>
+		</Unit>
 		<Unit filename="D:/c0.Project_Public/stm32_project/Qua_control/Qua_control/Core/Src/control/procession_operate/landing_process.cpp">
 			<Option target="Qua_control.elf"/>
 		</Unit>

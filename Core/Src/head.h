@@ -25,6 +25,7 @@
 #include "control/PWM/PWM_generator.h"  // pwm生成器
 #include "control/procession_operate/landing_process.h" // 过程控制： 降落流程
 #include "control/procession_operate/test_hove.h"   // 控制过程： 测试悬停性能
+#include "control/procession_operate/hove_alt_offset.h" // 在起飞阶段对
 
 // 数学库
 #include "math/matrix.h"      // 矩阵计算库

@@ -368,6 +368,30 @@ Core/Src/control/control_api.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/control_api.cpp.s
 .PHONY : Core/Src/control/control_api.cpp.s
 
+Core/Src/control/procession_operate/hove_alt_offset.obj: Core/Src/control/procession_operate/hove_alt_offset.cpp.obj
+.PHONY : Core/Src/control/procession_operate/hove_alt_offset.obj
+
+# target to build an object file
+Core/Src/control/procession_operate/hove_alt_offset.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/hove_alt_offset.cpp.obj
+.PHONY : Core/Src/control/procession_operate/hove_alt_offset.cpp.obj
+
+Core/Src/control/procession_operate/hove_alt_offset.i: Core/Src/control/procession_operate/hove_alt_offset.cpp.i
+.PHONY : Core/Src/control/procession_operate/hove_alt_offset.i
+
+# target to preprocess a source file
+Core/Src/control/procession_operate/hove_alt_offset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/hove_alt_offset.cpp.i
+.PHONY : Core/Src/control/procession_operate/hove_alt_offset.cpp.i
+
+Core/Src/control/procession_operate/hove_alt_offset.s: Core/Src/control/procession_operate/hove_alt_offset.cpp.s
+.PHONY : Core/Src/control/procession_operate/hove_alt_offset.s
+
+# target to generate assembly for a file
+Core/Src/control/procession_operate/hove_alt_offset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Qua_control.elf.dir\build.make CMakeFiles/Qua_control.elf.dir/Core/Src/control/procession_operate/hove_alt_offset.cpp.s
+.PHONY : Core/Src/control/procession_operate/hove_alt_offset.cpp.s
+
 Core/Src/control/procession_operate/landing_process.obj: Core/Src/control/procession_operate/landing_process.cpp.obj
 .PHONY : Core/Src/control/procession_operate/landing_process.obj
 
@@ -1711,6 +1735,9 @@ help:
 	@echo ... Core/Src/control/control_api.obj
 	@echo ... Core/Src/control/control_api.i
 	@echo ... Core/Src/control/control_api.s
+	@echo ... Core/Src/control/procession_operate/hove_alt_offset.obj
+	@echo ... Core/Src/control/procession_operate/hove_alt_offset.i
+	@echo ... Core/Src/control/procession_operate/hove_alt_offset.s
 	@echo ... Core/Src/control/procession_operate/landing_process.obj
 	@echo ... Core/Src/control/procession_operate/landing_process.i
 	@echo ... Core/Src/control/procession_operate/landing_process.s
