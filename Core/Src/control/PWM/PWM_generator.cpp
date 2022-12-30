@@ -45,10 +45,10 @@ void pwm_change(float value[4], TIM_HandleTypeDef* tim1, TIM_HandleTypeDef* tim2
      * */
 
     // 此处记录无人机信号分配
-    // No.1 AP
-    // No.2 AN
-    // No.3 DP
-    // No.4 DN
+    // No.1 DP
+    // No.2 DN
+    // No.3 AN
+    // No.4 AP
 
     int W2; // pwm 生成器数值
 
@@ -58,39 +58,41 @@ void pwm_change(float value[4], TIM_HandleTypeDef* tim1, TIM_HandleTypeDef* tim2
     value[2] = PWM_LOW_LIMIT_XROTOR + value[2]*PWM_RANGE_SIZE_XROTOR;
     value[3] = PWM_LOW_LIMIT_XROTOR + value[3]*PWM_RANGE_SIZE_XROTOR;
 
+    // CP/CN 通道暂时封闭
     // PA2 -- CP -- CH3 -- TIM2
     // value[0] = PWM_LOW_LIMIT_XROTOR + value[0]*PWM_RANGE_SIZE_XROTOR;
-    W2 = (int)(value[0]*((float)PWM_Period));
-    __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_3, W2);
+//    W2 = (int)(value[0]*((float)PWM_Period));
+//    __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_3, W2);
+//
+//    // PA3  -- CN -- CH4 -- TIM2
+//    W2 = (int)(value[0]*((float)PWM_Period));
+//    __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_4, W2);
 
-    // PA3  -- CN -- CH4 -- TIM2
-    W2 = (int)(value[0]*((float)PWM_Period));
-    __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_4, W2);
-
-    // PA15 -- AP -- CH1 -- TIM2
+    // PA15 -- AP -- TIM2-CH1   4号电机
     // value[1] = PWM_LOW_LIMIT_XROTOR + value[1]*PWM_RANGE_SIZE_XROTOR;
     W2 = (int)(value[0]*((float)PWM_Period));
     __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_1, W2);
 
-    // PB3  -- AN -- CH2 -- TIM2
+    // PB3  -- AN -- TIM2-CH2   3号电机
     W2 = (int)(value[1]*((float)PWM_Period));
     __HAL_TIM_SetCompare(tim2, TIM_CHANNEL_2, W2);
 
+    // BP/BN 通道暂时封闭
     // PE9  -- BP -- CH1 -- TIM1
     // value[2] = PWM_LOW_LIMIT_XROTOR + value[2]*PWM_RANGE_SIZE_XROTOR;
-    W2 = (int)(value[2]*((float)PWM_Period));
-    __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_1, W2);
+//    W2 = (int)(value[2]*((float)PWM_Period));
+//    __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_1, W2);
+//
+//    // PE11 -- BN -- CH2 -- TIM1
+//    W2 = (int)(value[2]*((float)PWM_Period));
+//    __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_2, W2);
 
-    // PE11 -- BN -- CH2 -- TIM1
-    W2 = (int)(value[2]*((float)PWM_Period));
-    __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_2, W2);
-
-    // PE13 -- DP -- CH3 -- TIM1
+    // PE13 -- DP -- TIM1-CH3 -- 1号电机
     // value[3] = PWM_LOW_LIMIT_XROTOR + value[3]*PWM_RANGE_SIZE_XROTOR;
     W2 = (int)(value[2]*((float)PWM_Period));
     __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_3, W2);
 
-    // PE14 -- DN -- CH4 -- TIM1
+    // PE14 -- DN -- TIM1-CH4 -- 2号电机
     W2 = (int)(value[3]*((float)PWM_Period));
     __HAL_TIM_SetCompare(tim1, TIM_CHANNEL_4, W2);
 }

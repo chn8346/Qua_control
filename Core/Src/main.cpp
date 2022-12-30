@@ -87,6 +87,9 @@ float distance_ultra_sonic = 0;
 
 extern float q0x,q1x,q2x,q3x;
 
+// 估计器校准 -- 起飞前对估计器的偏差进行校准
+float estimate_offset[3] = {0,0,0};
+
 
 /* USER CODE END PV */
 
@@ -304,6 +307,36 @@ int main(void)
     // 注意，内部有检测的死循环，达到要求才会继续
     REMOTE_CONTROL_get_zero_index(PPM_data, 11);
 
+    /* 姿态校准 */
+    char alt_msg[50] = "start ok, place flat in 5 sec \n";
+    sprintf((char *)alt_msg, "start ok, place flat in 5 sec \n");
+    uart1_transmit_with_next((uint8_t *) alt_msg, str_len_(alt_msg));
+    HAL_Delay(1000);
+
+    for(int i = 0; i < 2000; i++)
+    {
+        IMU_read_data(data, datap);
+        MAG_read_data(mag_data, mag_fdata);
+        calibrate_return_data(datap, datap+3, mag_fdata,0,0,0,0);
+        MahonyAHRSupdate(datap[4],datap[3],datap[5],
+                         datap[1],datap[0],datap[2],  // 【注意】 由于传感器安装问题，这个地方的xy是反的
+                         mag_fdata[1],mag_fdata[2],mag_fdata[2]);
+        pitch = asin(2*(q0x*q2x-q1x*q3x));
+        roll = atan(2*(q0x*q1x+q2x*q3x)/(1-2*(q1x*q1x+q2x*q2x)));
+        // float yaw = atan(2*(q0x*q3x+q1x*q2x)/(1-2*(q2x*q2x+q3x*q3x)))*rd;
+        yaw = atan2(2*(q0x*q3x+q1x*q2x),(1-2*(q2x*q2x+q3x*q3x)));
+
+        if(i > 1000){
+            estimate_offset[0] = estimate_offset[0] + pitch/1000;
+            estimate_offset[1] = estimate_offset[1] + roll/1000;
+            estimate_offset[2] = estimate_offset[2] + yaw/1000;
+        }
+    }
+
+    //sprintf((char *)alt_msg, "start ok, place flat in 5 sec \n");
+    //uart1_transmit_with_next((uint8_t *) alt_msg, str_len_(alt_msg));
+
+
 
     /* USER CODE END 2 */
 
@@ -348,18 +381,18 @@ int main(void)
           calibrate_return_data(datap, datap+3, mag_fdata,0,0,0,0);
 
           // 传感器如果旋转方向不一样
-          calibrate_QX(datap, datap + 3, mag_fdata);
+          //calibrate_QX(datap, datap + 3, mag_fdata);
 
 
           /* 状态估计 */
-          MahonyAHRSupdate(datap[3],datap[4],datap[5],
-                           datap[0],datap[1],datap[2],
-                           -mag_fdata[0],-mag_fdata[1],mag_fdata[2]);
+          MahonyAHRSupdate(datap[4],datap[3],datap[5],
+                           datap[1],datap[0],datap[2],  // 【注意】 由于传感器安装问题，这个地方的xy是反的
+                           mag_fdata[1],mag_fdata[2],mag_fdata[2]);
 
           quat[0] = q0x; quat[1] = q1x; quat[2] = q2x; quat[3] = q3x;
-          pitch = asin(2*(q0x*q2x-q1x*q3x));
-          roll = atan(2*(q0x*q1x+q2x*q3x)/(1-2*(q1x*q1x+q2x*q2x)));
-          // float yaw = atan(2*(q0x*q3x+q1x*q2x)/(1-2*(q2x*q2x+q3x*q3x)))*rd;
+          pitch = asin(2*(q0x*q2x-q1x*q3x)) - estimate_offset[0];
+          roll = atan(2*(q0x*q1x+q2x*q3x)/(1-2*(q1x*q1x+q2x*q2x))) - estimate_offset[1];
+          // float yaw = atan(2*(q0x*q3x+q1x*q2x)/(1-2*(q2x*q2x+q3x*q3x)))*rd - estimate_offset[2];
           yaw = atan2(2*(q0x*q3x+q1x*q2x),(1-2*(q2x*q2x+q3x*q3x)));
 
           /* 控制器更新 */
@@ -414,7 +447,7 @@ int main(void)
                                                               target_data[PID_API_INDEX_PITCH]*rd,
                                                               target_data[PID_API_INDEX_ROLL]*rd,
                                                               target_data[PID_API_INDEX_YAW]*rd);
-#elif 1     // 油门显示
+#elif 0     // 油门显示
               sprintf(msg, "Q1=%d,Q2=%d,Q3=%d,Q4=%d, ",
                       (int)(Qua_pwm_rate[0]*PWM_Period),
                       (int)(Qua_pwm_rate[1]*PWM_Period),
@@ -459,8 +492,8 @@ int main(void)
                       mag_fdata[2],
                       mag_fdata[1]);
 
-#elif 0     // 四元数和角度的姿态估计测试
-                sprintf(msg, "Q1=%.4f, Q2=%.4f, Q3=%.4f, Q4=%.4f, pitch=%.4f, roll=%.4f, yaw=%.4f\n",
+#elif 1     // 四元数和角度的姿态估计测试
+                sprintf(msg, "Q1=%.4f, Q2=%.4f, Q3=%.4f, Q4=%.4f, pitch=%.4f, roll=%.4f, yaw=%.4f,\n",
                                                                                     Qua_pwm_rate[0],
                                                                                     Qua_pwm_rate[1],
                                                                                     Qua_pwm_rate[2],
@@ -1429,7 +1462,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
         // LED2_TOGGLE
     }
     else if(huart -> Instance == USART1){
-        uart1_transmit((uint8_t*)u2rx_buff, 1);
+        // uart1_transmit((uint8_t*)u1rx_buff, 1);
     }
     else if(huart -> Instance == USART3){
         sonic_data_length = sonic_data_length + 1;  // 长度为2时输出数据

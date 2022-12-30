@@ -141,10 +141,16 @@ void pid_API::get_OUTPUT(float Qua_out[4] ,float force_moment_out[6]) {
     }
 
     // 求解四旋翼转速
-    Qua_out[0] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km - (r+p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
-    Qua_out[1] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km + (r-p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
-    Qua_out[2] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km + (r+p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
-    Qua_out[3] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km - (r-p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+//    Qua_out[0] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km - (r+p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+//    Qua_out[1] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km + (r-p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+//    Qua_out[2] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km + (r+p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+//    Qua_out[3] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km - (r-p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[0] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km - (p+r)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[1] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km - (p-r)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[2] = force/(float)4.0/Qua_Kf + y/(float)4.0/Qua_Km - (r-p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+    Qua_out[3] = force/(float)4.0/Qua_Kf - y/(float)4.0/Qua_Km - (-r-p)/(float)4.0/Qua_Kf/Qua_DIAMETER;
+
+
 #endif
 
     // 油门比例进行等幅缩小(和油门比较进行放缩)

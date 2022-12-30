@@ -54,13 +54,23 @@ void calibrate_QX(float * origin_acc, float * origin_angle, float * origin_mag);
 // 用于快速init使用的经验数值
 
 #define CBL_MPU6050_ACC_GYRO_BIAS       {550.0, 1500.0, -2900.0, -64.8, 294.0, -32.0}
-#define CBL_MPU6050_ANGLE_RATE_GAIN     {0.00012, 0.00014, 0.00012}
+#define CBL_MPU6050_ANGLE_RATE_GAIN     {0.00012, 0.00014, -0.00012}
 #define CBL_MPU6050_GRAVITY_VALUE       176.0
 
 #define CBL_MAG3110_BIAS                {27800.0, 103.0, -2005.0}
 #define CBL_MAG3110_HALF_RANGE          {45.0, 310.0, 375.0}
 
-#define CBL_HMC5883_BIAS                {15.0000, 477.5000, -109.5000}
-#define CBL_HMC5883_HALF_RANGE          {365.0000, 105.5000, 391.5000}
+#define CBL_HMC5883_BIAS                {223.0000, -405.0000, -197.0000}
+#define CBL_HMC5883_HALF_RANGE          {451.0000, 163.0000, 445.0000}
 
 #endif //QUA_CONTROL_SENSOR_CALIBRATE_H
+
+
+//16:30:28.691-> The calibrate data below:
+//16:30:28.735->  BIAS_ACC(xyz): 61.5867, 729.8597, -1937.8320
+//16:30:28.796-> BIAS_GYRO(xyz): -45.0000, 349.2718, -66.1433
+//16:30:28.839->  BIAS_MAG(xyz): 223.0000, -405.0000, -197.0000
+//16:30:28.901-> Angle Rate Gain(x10000): ROLL---23.40906998  ,  PITCH--7.83447409  ,  YAW--1.30259214
+//16:30:28.946-> Mag Half Range(xyz): 451.0000, 163.0000, 445.0000
+//16:30:29.005-> Real Gravity Value(x0.01): 172.2346
+//16:30:29.050-> calibrate data above ... start in 5 sec
